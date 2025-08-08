@@ -1,51 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kyle Colglazier — Portfolio</title>
+  <meta name="description" content="Portfolio site for Kyle Colglazier, Learning Experience Designer and Sales Trainer." />
+  <meta property="og:title" content="Kyle Colglazier — Learning Experience Designer" />
+  <meta property="og:description" content="Portfolio site for Kyle Colglazier, Learning Experience Designer and Sales Trainer." />
+  <meta property="og:image" content="/assets/opengraph.jpg" />
+  <meta property="og:url" content="https://kpcolgla.github.io/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="/site.webmanifest" />
   <link rel="stylesheet" href="/assets/style.css" />
 </head>
 <body>
-  <div class="wrap">
-    <nav>
-      <strong>Kyle Colglazier</strong>
-      <div class="right">
-        <a href="/">Home</a>
-        <a href="#work">Work</a>
-        <a href="#writing">Writing</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+  <div class="progress-container">
+    <div id="progress" class="progress-bar"></div>
+  </div>
+  <nav>
+    <div class="logo">Kyle Colglazier</div>
+    <div class="nav-links">
+      <a href="#home" class="active">Home</a>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+  <main id="home">
+    <section class="hero section-visible">
+      <img src="/assets/headshot.jpg" alt="Kyle Colglazier headshot" />
+      <div class="hero-text">
+        <h1>Instructional Design &amp; Sales Enablement</h1>
+        <p>I create high‑impact onboarding, accreditation and AI‑powered practice for fintech GTM teams and beyond. I help people build confidence and perform at their best.</p>
+        <div class="cta-buttons">
+          <a href="mailto:kpcolgla@gmail.com" class="cta-primary">Contact Kyle</a>
+          <a href="/resume/Kyle_Colglazier.pdf" class="cta-secondary" download>Download résumé</a>
+        </div>
       </div>
-    </nav>
-
-    <section class="hero">
-      <h1>Instructional Design & Sales Enablement</h1>
-      <p>I build high-impact onboarding, accreditation, and AI-powered practice for fintech GTM teams.</p>
     </section>
-
-    <section id="work">
+    <section id="work" class="section-hidden">
       <h2>Selected Work</h2>
       <div class="cards">
-        <div class="card"><h3>Sales Onboarding (FinTech)</h3><p>Designed a 6-week curriculum with KPI-tied assessments and AI role-plays.</p></div>
-        <div class="card"><h3>Storytelling Program (EU)</h3><p>Moved reps from proficiency to mastery using SCR framework + guided practice.</p></div>
-        <div class="card"><h3>Compliance Academy</h3><p>Annual certs rebuilt in modern e-learning; 96% on-time completion.</p></div>
+        <div class="card">
+          <h3>PayPal • Global Enablement</h3>
+          <p>Relaunched a 6‑week GTM onboarding program, integrating AI‑driven role‑play simulations to reduce ramp time by 30% for 500+ reps.</p>
+        </div>
+        <div class="card">
+          <h3>Meta • Certification Curriculum</h3>
+          <p>Developed the digital marketing certification and exam prep program adopted by 100K+ learners worldwide.</p>
+        </div>
+        <div class="card">
+          <h3>Top Law Firm • Attorney Training</h3>
+          <p>Designed and delivered accredited professional development for 4,000 attorneys, boosting satisfaction scores by 25%.</p>
+        </div>
+        <div class="card">
+          <h3>University Teaching</h3>
+          <p>Taught over 1,000 students at Texas A&amp;M and Syracuse, igniting confidence in public speaking and persuasive storytelling.</p>
+        </div>
       </div>
     </section>
-
-    <section id="writing">
-      <h2>Writing</h2>
-      <p>Blog coming soon. (We’ll wire this to Markdown posts later.)</p>
-    </section>
-
-    <section id="about">
+    <section id="about" class="section-hidden">
       <h2>About</h2>
-      <p>Chicago-based ID/LXD with fintech, AI simulation, and global program experience.</p>
+      <p>Based in Chicago, I&#39;m a Learning Experience Designer and Sales Trainer with a background spanning higher education, big tech, fintech and legal services. I&#39;ve built global programs that scale, stick and support revenue teams. I love combining clear communication with engaging, performance‑driven experiences.</p>
     </section>
-
-    <section id="contact" class="footer">
-      <p>Say hi: <a href="mailto:kyle@example.com">kyle@example.com</a> · <a href="https://www.linkedin.com/in/yourhandle">LinkedIn</a> · <a href="https://github.com/kpcolgla">GitHub</a></p>
+    <section id="contact" class="section-hidden">
+      <h2>Contact</h2>
+      <p>Let’s work together. Reach out via email or connect with me on social media.</p>
+      <div class="contact-links">
+        <a href="mailto:kpcolgla@gmail.com">Email</a>
+        <a href="tel:+13093383943">Call</a>
+        <a href="https://www.linkedin.com/in/kyle-colglazier/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/kpcolgla" target="_blank" rel="noopener">GitHub</a>
+      </div>
     </section>
-  </div>
+  </main>
+  <script src="/assets/script.js"></script>
 </body>
 </html>
