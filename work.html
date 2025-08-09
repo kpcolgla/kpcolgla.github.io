@@ -1,87 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Work – Kyle Colglazier</title>
-    <meta
-      name="description"
-      content="Browse selected learning experience design projects by Kyle Colglazier."
-    />
-    <link rel="stylesheet" href="assets/css/global.css" />
-    <link
-      rel="stylesheet"
-      href="assets/css/dark.css"
-      id="dark-mode-stylesheet"
-      disabled
-    />
-  </head>
-  <body>
-    <header>
-      <div class="container">
-        <nav>
-          <a href="index.html" class="logo">Kyle&nbsp;Colglazier</a>
-          <div class="nav-links">
-            <a href="work.html">Work</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-            <button class="theme-toggle" data-theme-toggle aria-label="Switch theme">
-              🌙
-            </button>
-          </div>
-        </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Work – Kyle Colglazier</title>
+  <link rel="stylesheet" href="assets/css/global.css" />
+  <link rel="stylesheet" href="assets/css/dark.css" media="(prefers-color-scheme: dark)" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
 
-        <!-- Static headshot displayed on all pages -->
-        <div class="site-headshot">
-          <img src="assets/images/headshot.jpg" alt="Kyle Colglazier headshot" />
-        </div>
-      </div>
+  <aside class="sidebar" aria-label="Primary">
+    <img src="assets/images/headshot.jpg" alt="Kyle Colglazier headshot">
+    <h2>Kyle Colglazier</h2>
+    <p>Learning Experience Designer & Sales Enablement</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="work.html" aria-current="page">Work</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <!-- Change the file name if yours is different -->
+      <a href="resume.docx">Download Resume</a>
+    </nav>
+  </aside>
+
+  <main class="content" id="main">
+    <header>
+      <h1>Work</h1>
+      <p>Selected projects. Case studies are in progress (placeholders today) — links open the full shell pages.</p>
     </header>
-    <main class="container">
-      <h1 style="text-align: center; margin-top: 2rem;">Work</h1>
-      <p style="text-align: center; max-width: 650px; margin: 1rem auto; color: var(--text-secondary);">
-        Explore a curated collection of my learning experience design and instructional design projects. Each case study will include objectives, design process, artifacts and outcomes. Content coming soon.
-      </p>
-      <div class="filter-bar" aria-label="Filter projects">
-        <button class="active">All</button>
-        <button>Onboarding</button>
-        <button>Sales&nbsp;Enablement</button>
-        <button>AI&nbsp;Simulations</button>
-        <button>Compliance</button>
+
+    <section aria-label="Project filters" style="margin-bottom:1rem;">
+      <button class="chip">All</button>
+      <button class="chip">Onboarding</button>
+      <button class="chip">Sales Enablement</button>
+      <button class="chip">AI Simulations</button>
+      <button class="chip">Compliance</button>
+    </section>
+
+    <section aria-label="Projects grid" class="grid">
+      <article class="project-card">
+        <h3><a href="work/onboarding/index.html">Sales Onboarding Redesign</a></h3>
+        <p>Cut ramp time and improved coaching. <em>Coming soon.</em></p>
+        <span class="badge">Coming Soon</span>
+      </article>
+
+      <article class="project-card">
+        <h3><a href="work/ai-sim/index.html">AI Role‑Play Simulations</a></h3>
+        <p>Scaled objection‑handling practice. <em>Coming soon.</em></p>
+        <span class="badge">Coming Soon</span>
+      </article>
+
+      <article class="project-card">
+        <h3><a href="work/certification/index.html">Certification & Training</a></h3>
+        <p>Interactive learning + certification. <em>Coming soon.</em></p>
+        <span class="badge">Coming Soon</span>
+      </article>
+
+      <article class="project-card">
+        <h3><a href="work/lms-migration/index.html">LMS Migration & Analytics</a></h3>
+        <p>Governance, taxonomy, and insights. <em>Coming soon.</em></p>
+        <span class="badge">Coming Soon</span>
+      </article>
+    </section>
+
+    <section style="margin-top:2rem;">
+      <h2>Organisations I’ve Worked With</h2>
+      <p class="muted">Logos shown below represent employers/clients.</p>
+      <div class="logo-row">
+        <img src="assets/images/meta.svg" alt="Meta logo with infinity symbol and the word Meta">
+        <img src="assets/images/paypal-icon.svg" alt="PayPal logo, overlapping blue P letters">
+        <img src="assets/images/sidley.png" alt="Sidley Austin LLP logo">
+        <img src="assets/images/tamu-2021.svg" alt="Texas A&amp;M University logo">
+        <img src="assets/images/syracuse-s.svg" alt="Syracuse University block S logo">
       </div>
-      <div class="projects">
-        <a href="work/onboarding/index.html" class="project-card">
-          <h3>Sales Onboarding Redesign</h3>
-          <p>Cut ramp time and improved coaching. Coming soon.</p>
-          <span class="badge">Coming Soon</span>
-        </a>
-        <a href="work/ai-sim/index.html" class="project-card">
-          <h3>AI Role‑Play Simulations</h3>
-          <p>Scaled objection handling practice. Coming soon.</p>
-          <span class="badge">Coming Soon</span>
-        </a>
-        <a href="work/certification/index.html" class="project-card">
-          <h3>Certification &amp; Training</h3>
-          <p>Interactive training and certification. Coming soon.</p>
-          <span class="badge">Coming Soon</span>
-        </a>
-        <a href="work/lms-migration/index.html" class="project-card">
-          <h3>LMS Migration &amp; Analytics</h3>
-          <p>Migration and analytics management. Coming soon.</p>
-          <span class="badge">Coming Soon</span>
-        </a>
-      </div>
-    </main>
-    <footer>
-      <div class="container">
-        <p>&copy; <span id="year"></span> Kyle&nbsp;Colglazier. All rights reserved.</p>
-        <a href="accessibility.html" class="accessibility-link">Accessibility statement</a>
-      </div>
-    </footer>
-    <script src="assets/js/theme.js"></script>
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
-  </body>
+    </section>
+  </main>
+
+</body>
 </html>
