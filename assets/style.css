@@ -1,4 +1,36 @@
 :root {
+  /* Cross-browser fallbacks for color-mix and balanced text */
+:root{
+  --accent-25: rgba(158,154,46,.25);
+  --accent-45: rgba(158,154,46,.45);
+  --card-hover: #1b1f2a; /* hover fallback */
+}
+
+/* default (fallback) */
+.chip { border-color: var(--accent-45); }
+.chip:hover { background: var(--accent-25); }
+.chip.active { background: var(--accent-25); }
+.card:hover,.card:focus-within{
+  background-color: var(--card-hover);
+  border-color: var(--accent-45);
+}
+
+/* use color-mix when supported */
+@supports (color: color-mix(in srgb, #000 50%, #fff)) {
+  .chip { border-color: color-mix(in srgb, var(--accent) 45%, #222); }
+  .chip:hover { background: color-mix(in srgb, var(--accent) 25%, #0d1017); }
+  .chip.active { background: color-mix(in srgb, var(--accent) 40%, #0d1017); }
+  .card:hover,.card:focus-within{
+    background-color: color-mix(in srgb, var(--card) 85%, var(--accent) 15%);
+    border-color: color-mix(in srgb, var(--accent) 40%, transparent);
+  }
+}
+
+/* smooth fonts on WebKit */
+html { -webkit-font-smoothing: antialiased; }
+
+  .avatar img { object-fit: cover; object-position: 50% 15%; }
+
   --bg:#0B0C0F; --fg:#EAEAEA; --muted:#A0A0A0;
   --card:#151821; --accent:#9E9A2E; --accent-hover:#8A8728; --tint:#B9B76E;
   --radius:14px; --max:1000px;
