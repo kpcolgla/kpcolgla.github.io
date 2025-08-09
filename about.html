@@ -1,85 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About – Kyle Colglazier</title>
-    <meta
-      name="description"
-      content="Learn more about Kyle Colglazier, a learning experience designer with a background in instructional design and sales enablement."
-    />
-    <link rel="stylesheet" href="assets/css/global.css" />
-    <link
-      rel="stylesheet"
-      href="assets/css/dark.css"
-      id="dark-mode-stylesheet"
-      disabled
-    />
-  </head>
-  <body>
-    <header>
-      <div class="container">
-        <nav>
-          <a href="index.html" class="logo">Kyle&nbsp;Colglazier</a>
-          <div class="nav-links">
-            <a href="work.html">Work</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-            <button class="theme-toggle" data-theme-toggle aria-label="Switch theme">
-              🌙
-            </button>
-          </div>
-        </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About – Kyle Colglazier</title>
+  <link rel="stylesheet" href="assets/css/global.css" />
+  <link rel="stylesheet" href="assets/css/dark.css" media="(prefers-color-scheme: dark)" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
 
-        <!-- Static headshot displayed on all pages -->
-        <div class="site-headshot">
-          <img src="assets/images/headshot.jpg" alt="Kyle Colglazier headshot" />
-        </div>
-      </div>
+  <aside class="sidebar" aria-label="Primary">
+    <img src="assets/images/headshot.jpg" alt="Kyle Colglazier headshot">
+    <h2>Kyle Colglazier</h2>
+    <p>Learning Experience Designer & Sales Enablement</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="work.html">Work</a>
+      <a href="about.html" aria-current="page">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="resume.docx">Download Resume</a>
+    </nav>
+  </aside>
+
+  <main class="content" id="main">
+    <header>
+      <h1>About</h1>
+      <p>I build practical, scalable learning that improves sales performance — onboarding, AI‑powered simulations, blended programs, and certification.</p>
     </header>
-    <main class="container">
-      <h1 style="text-align: center; margin-top: 2rem;">About</h1>
-      <section class="about" style="margin-top: 2rem;">
-        <!-- Headshot moved to header for global display -->
-        <div class="bio">
-          <p>
-            Hello! I'm Kyle Colglazier, an instructional designer and learning
-            strategist based in Chicago. With a background spanning higher
-            education, legal training and fintech, I translate complex
-            business goals into engaging learning experiences that reduce
-            ramp time and improve performance. My approach blends
-            research‑driven analysis, empathetic storytelling and a
-            commitment to accessibility and inclusion.
-          </p>
-          <p>
-            I specialize in sales enablement, onboarding, certifications and
-            AI‑powered practice. When I'm not designing learning, you can find
-            me exploring new web technologies, mentoring other designers or
-            traveling with my family.
-          </p>
-        </div>
-        <div class="skills">
-          <span>Instructional Design</span>
-          <span>Learning Experience Design</span>
-          <span>Sales Enablement</span>
-          <span>Storytelling</span>
-          <span>Accessibility (WCAG 2.2)</span>
-          <span>HTML &amp; CSS</span>
-          <span>JavaScript</span>
-          <span>GitHub Pages</span>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <div class="container">
-        <p>&copy; <span id="year"></span> Kyle&nbsp;Colglazier. All rights reserved.</p>
-        <a href="accessibility.html" class="accessibility-link">Accessibility statement</a>
+
+    <section>
+      <h2>What I’m good at</h2>
+      <ul>
+        <li>Learning Experience Design (LXD), Instructional Design (ID)</li>
+        <li>Sales Enablement & Onboarding</li>
+        <li>AI Role‑Play Simulations</li>
+        <li>Blended Learning & Curriculum Design</li>
+        <li>LMS governance, taxonomy, and analytics</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Tools</h2>
+      <p class="muted">Storyline 360, Camtasia, Adobe CC, Vyond, Microsoft 365, Cornerstone, MindTickle, Evolve, Blackboard, Canvas, Gen‑AI tools</p>
+    </section>
+
+    <section>
+      <h2>Organisations I’ve Worked With</h2>
+      <div class="logo-row">
+        <img src="assets/images/meta.svg" alt="Meta logo with infinity symbol and the word Meta">
+        <img src="assets/images/paypal-icon.svg" alt="PayPal logo, overlapping blue P letters">
+        <img src="assets/images/sidley.png" alt="Sidley Austin LLP logo">
+        <img src="assets/images/tamu-2021.svg" alt="Texas A&amp;M University logo">
+        <img src="assets/images/syracuse-s.svg" alt="Syracuse University block S logo">
       </div>
-    </footer>
-    <script src="assets/js/theme.js"></script>
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
-  </body>
+    </section>
+  </main>
+
+</body>
 </html>
