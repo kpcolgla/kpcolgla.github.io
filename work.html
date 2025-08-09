@@ -4,78 +4,70 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Work – Kyle Colglazier</title>
-  <link rel="stylesheet" href="assets/css/global.css" />
-  <link rel="stylesheet" href="assets/css/dark.css" media="(prefers-color-scheme: dark)" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/dark.css" media="(prefers-color-scheme: dark)">
+  <meta name="description" content="Kyle Colglazier – Learning Experience Design & Sales Enablement portfolio.">
+  <meta name="theme-color" content="#1d4ed8">
 </head>
 <body>
+  <a href="#main" class="skip-link">Skip to content</a>
 
-  <aside class="sidebar" aria-label="Primary">
-    <img src="assets/images/headshot.jpg" alt="Kyle Colglazier headshot">
+  <aside class="sidebar" aria-label="Primary navigation">
+    <img src="assets/images/headshot.jpg" alt="Kyle Colglazier headshot" class="headshot">
     <h2>Kyle Colglazier</h2>
     <p>Learning Experience Designer & Sales Enablement</p>
     <nav>
       <a href="index.html">Home</a>
       <a href="work.html" aria-current="page">Work</a>
+      <a href="process.html">Process</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
-      <!-- Change the file name if yours is different -->
+      <div class="divider"></div>
       <a href="resume.docx">Download Resume</a>
     </nav>
   </aside>
 
   <main class="content" id="main">
-    <header>
-      <h1>Work</h1>
-      <p>Selected projects. Case studies are in progress (placeholders today) — links open the full shell pages.</p>
-    </header>
+    
+<header>
+  <h1>Work</h1>
+  <p class="muted">Browse selected projects. Case studies have TL;DRs now; full write‑ups coming soon.</p>
+</header>
 
-    <section aria-label="Project filters" style="margin-bottom:1rem;">
-      <button class="chip">All</button>
-      <button class="chip">Onboarding</button>
-      <button class="chip">Sales Enablement</button>
-      <button class="chip">AI Simulations</button>
-      <button class="chip">Compliance</button>
-    </section>
+<section aria-label="Project filters" style="margin-bottom:1rem;">
+  <button class="chip">All</button>
+  <button class="chip">Onboarding</button>
+  <button class="chip">Sales Enablement</button>
+  <button class="chip">AI Simulations</button>
+  <button class="chip">Compliance</button>
+</section>
 
-    <section aria-label="Projects grid" class="grid">
-      <article class="project-card">
-        <h3><a href="work/onboarding/index.html">Sales Onboarding Redesign</a></h3>
-        <p>Cut ramp time and improved coaching. <em>Coming soon.</em></p>
-        <span class="badge">Coming Soon</span>
-      </article>
+<section aria-label="Projects grid" class="grid">
+  <article class="project-card">
+    <h3><a href="work/onboarding/index.html">Sales Onboarding Redesign</a></h3>
+    <p class="muted"><strong>Role:</strong> Lead ID • <strong>Problem:</strong> ramp too slow • <strong>Outcome:</strong> coaching quality up; time‑to‑first‑deal down.</p>
+    <span class="badge">Case in progress</span>
+  </article>
+  <article class="project-card">
+    <h3><a href="work/ai-sim/index.html">AI Role‑Play Simulations</a></h3>
+    <p class="muted"><strong>Role:</strong> Designer • <strong>Problem:</strong> limited practice at scale • <strong>Outcome:</strong> uplift in objection‑handling KPIs.</p>
+    <span class="badge">Case in progress</span>
+  </article>
+  <article class="project-card">
+    <h3><a href="work/certification/index.html">Certification & Training</a></h3>
+    <p class="muted"><strong>Role:</strong> ID • <strong>Problem:</strong> outdated curriculum • <strong>Outcome:</strong> improved completion + assessment accuracy.</p>
+    <span class="badge">Case in progress</span>
+  </article>
+  <article class="project-card">
+    <h3><a href="work/lms-migration/index.html">LMS Migration & Analytics</a></h3>
+    <p class="muted"><strong>Role:</strong> PM/ID • <strong>Problem:</strong> fragmented content • <strong>Outcome:</strong> searchability + reporting improved.</p>
+    <span class="badge">Case in progress</span>
+  </article>
+</section>
 
-      <article class="project-card">
-        <h3><a href="work/ai-sim/index.html">AI Role‑Play Simulations</a></h3>
-        <p>Scaled objection‑handling practice. <em>Coming soon.</em></p>
-        <span class="badge">Coming Soon</span>
-      </article>
-
-      <article class="project-card">
-        <h3><a href="work/certification/index.html">Certification & Training</a></h3>
-        <p>Interactive learning + certification. <em>Coming soon.</em></p>
-        <span class="badge">Coming Soon</span>
-      </article>
-
-      <article class="project-card">
-        <h3><a href="work/lms-migration/index.html">LMS Migration & Analytics</a></h3>
-        <p>Governance, taxonomy, and insights. <em>Coming soon.</em></p>
-        <span class="badge">Coming Soon</span>
-      </article>
-    </section>
-
-    <section style="margin-top:2rem;">
-      <h2>Organisations I’ve Worked With</h2>
-      <p class="muted">Logos shown below represent employers/clients.</p>
-      <div class="logo-row">
-        <img src="assets/images/meta.svg" alt="Meta logo with infinity symbol and the word Meta">
-        <img src="assets/images/paypal-icon.svg" alt="PayPal logo, overlapping blue P letters">
-        <img src="assets/images/sidley.png" alt="Sidley Austin LLP logo">
-        <img src="assets/images/tamu-2021.svg" alt="Texas A&amp;M University logo">
-        <img src="assets/images/syracuse-s.svg" alt="Syracuse University block S logo">
-      </div>
-    </section>
+    <footer>© 2025 Kyle Colglazier • <a href="accessibility.html">Accessibility</a></footer>
   </main>
-
 </body>
 </html>

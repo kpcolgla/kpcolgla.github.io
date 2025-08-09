@@ -2,47 +2,78 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kyle Colglazier — Learning Experience Design Portfolio</title>
-  <link rel="stylesheet" href="assets/css/global.css" />
-  <link rel="stylesheet" href="assets/css/dark.css" media="(prefers-color-scheme: dark)" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kyle Colglazier – LXD Portfolio</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/dark.css" media="(prefers-color-scheme: dark)">
+  <meta name="description" content="Kyle Colglazier – Learning Experience Design & Sales Enablement portfolio.">
+  <meta name="theme-color" content="#1d4ed8">
 </head>
 <body>
+  <a href="#main" class="skip-link">Skip to content</a>
 
-  <div class="sidebar">
-    <img src="assets/images/headshot.jpg" alt="Kyle Colglazier headshot">
+  <aside class="sidebar" aria-label="Primary navigation">
+    <img src="assets/images/headshot.jpg" alt="Kyle Colglazier headshot" class="headshot">
     <h2>Kyle Colglazier</h2>
-    <p>Learning Experience Designer & Sales Enablement Expert</p>
+    <p>Learning Experience Designer & Sales Enablement</p>
     <nav>
-      <a href="index.html">Home</a>
+      <a href="index.html" aria-current="page">Home</a>
       <a href="work.html">Work</a>
+      <a href="process.html">Process</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
-      <a href="Kyle-Colglazier-Resume.pdf" target="_blank">Download Resume</a>
+      <div class="divider"></div>
+      <a href="resume.docx">Download Resume</a>
     </nav>
+  </aside>
+
+  <main class="content" id="main">
+    
+<header>
+  <h1>Learning that moves the needle</h1>
+  <p class="muted">I design onboarding, AI‑powered simulations, and scalable programs that improve sales performance.</p>
+</header>
+
+<section>
+  <h2>Organisations I’ve worked with</h2>
+  <div class="logo-row" aria-label="Employers and clients">
+    <img src="assets/images/meta.svg" alt="Meta logo with infinity symbol and the word Meta">
+    <img src="assets/images/paypal-icon.svg" alt="PayPal logo, overlapping blue P letters">
+    <img src="assets/images/sidley.png" alt="Sidley Austin LLP logo">
+    <img src="assets/images/tamu-2021.svg" alt="Texas A&M University logo">
+    <img src="assets/images/syracuse-s.svg" alt="Syracuse University block S logo">
   </div>
+</section>
 
-  <div class="content">
-    <h1>Welcome</h1>
-    <p>I create impactful learning experiences that help teams grow skills and achieve measurable business results.</p>
-
-    <h2>Organisations I’ve Worked With</h2>
-    <div class="logo-row">
-      <img src="assets/images/meta-logo.svg" alt="Meta logo with infinity symbol and the word Meta">
-      <img src="assets/images/paypal-logo.svg" alt="PayPal logo, overlapping blue P letters">
-      <img src="assets/images/sidley-logo.svg" alt="Sidley Austin LLP logo">
-      <img src="assets/images/tamu-logo.svg" alt="Texas A&M University logo">
-      <img src="assets/images/syracuse-logo.svg" alt="Syracuse University logo">
-    </div>
-
-    <h2>Recent Projects</h2>
-    <div class="project-card">
-      <h3>Onboarding Program</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae magna vel leo facilisis facilisis.</p>
-    </div>
-
+<section style="margin-top:2rem;">
+  <h2>Featured work</h2>
+  <div class="grid">
+    <article class="project-card">
+      <h3><a href="work/onboarding/index.html">Sales Onboarding Redesign</a></h3>
+      <p class="muted">TL;DR: Reduced ramp time and improved coaching quality across regions.</p>
+      <span class="badge">Case in progress</span>
+    </article>
+    <article class="project-card">
+      <h3><a href="work/ai-sim/index.html">AI Role‑Play Simulations</a></h3>
+      <p class="muted">TL;DR: Scaled objection‑handling practice with measurable uplift in win‑rates.</p>
+      <span class="badge">Case in progress</span>
+    </article>
+    <article class="project-card">
+      <h3><a href="work/certification/index.html">Certification & Training</a></h3>
+      <p class="muted">TL;DR: Streamlined curriculum and assessments to drive product adoption.</p>
+      <span class="badge">Case in progress</span>
+    </article>
+    <article class="project-card">
+      <h3><a href="work/lms-migration/index.html">LMS Migration & Analytics</a></h3>
+      <p class="muted">TL;DR: Unified taxonomy + dashboards to accelerate insights and governance.</p>
+      <span class="badge">Case in progress</span>
+    </article>
   </div>
+</section>
 
+    <footer>© 2025 Kyle Colglazier • <a href="accessibility.html">Accessibility</a></footer>
+  </main>
 </body>
 </html>

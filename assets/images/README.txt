@@ -1,0 +1,1 @@
+Place your existing images here: headshot.jpg, meta.svg, paypal-icon.svg, sidley.png, tamu-2021.svg, syracuse-s.svg

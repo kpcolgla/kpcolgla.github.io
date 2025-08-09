@@ -1,11 +1,10 @@
-:root {
-  --bg: #121212;
-  --bg-secondary: #1e1e1e;
-  --text-primary: #f1f1f1;
-  --text-secondary: #cfcfcf;
-  --accent: #4dabf7;
-  --accent-hover: #339af0;
-  --border: #333;
-  --card-bg: #1f2937;
-  font-family: 'Inter', sans-serif;
+:root{
+  --bg:#0b0f14;
+  --bg-secondary:#0f1720;
+  --text-primary:#e5e7eb;
+  --text-secondary:#9ca3af;
+  --accent:#60a5fa;
+  --accent-hover:#3b82f6;
+  --border:#1f2937;
+  --card-bg:#111827;
 }
