@@ -88,3 +88,31 @@ h1, h2, h3, h4 {
 .logo-row img {
   height: 40px;
 }
+
+.chip {
+  border: 1px solid var(--border);
+  border-radius: 9999px;
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  padding: 0.4rem 0.9rem;
+  font-size: 0.875rem;
+  margin-right: 0.4rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.badge {
+  display: inline-block;
+  border-radius: 9999px;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.muted { color: var(--text-secondary); }
