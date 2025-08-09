@@ -8,4 +8,6 @@
   --accent: #4dabf7;
   --accent-hover: #339af0;
   --border: #333;
+  /* Dark theme card background: slightly lighter than background for contrast */
+  --card-bg: #1f2937;
 }

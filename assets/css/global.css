@@ -33,6 +33,8 @@ body {
   --accent: #0066cc;
   --accent-hover: #004e99;
   --border: #e0e0e0;
+  /* Card background colour: separate variable for easier theming */
+  --card-bg: #f8f9fa;
 }
 
 /* Layout */
@@ -188,22 +190,23 @@ nav .theme-toggle {
 }
 
 .project-card {
-  /* Modern card design: softer background, subtle border, rounded corners, gentle shadow */
-  background-color: var(--bg-secondary);
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  /* Modern card design: use card background variable for light/dark themes,
+     remove borders, increase padding and add a soft shadow */
+  background-color: var(--card-bg);
+  border: none;
   border-radius: 0.75rem;
-  padding: 1.5rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   transition: box-shadow 0.2s, transform 0.2s;
 }
 
 .project-card:hover {
   /* Increase elevation on hover */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
 }
 
 .project-card h3 {
