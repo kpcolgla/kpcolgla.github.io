@@ -1,54 +1,26 @@
-// Theme toggle script. Handles switching between light and dark modes.
-(function () {
-  const toggleButton = document.querySelector('[data-theme-toggle]');
-  const darkStyle = document.getElementById('dark-mode-stylesheet');
-
-  // Determine the initial theme: check localStorage or system preference
-  function initTheme() {
-    const stored = localStorage.getItem('theme');
-    if (stored === 'dark') {
-      enableDark();
-    } else if (stored === 'light') {
-      disableDark();
-    } else {
-      // Use system preference
-      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        enableDark();
-      } else {
-        disableDark();
-      }
-    }
+(function(){
+  const STORAGE_KEY = 'theme-preference';
+  const getPref = () => localStorage.getItem(STORAGE_KEY);
+  const setPref = v => localStorage.setItem(STORAGE_KEY, v);
+  function applyTheme(pref){
+    if (pref === 'light') document.documentElement.classList.remove('dark');
+    else if (pref === 'dark') document.documentElement.classList.add('dark');
+    else document.documentElement.classList.remove('dark');
   }
-
-  function enableDark() {
-    darkStyle.removeAttribute('disabled');
-    localStorage.setItem('theme', 'dark');
-    updateToggleLabel('light');
-  }
-
-  function disableDark() {
-    darkStyle.setAttribute('disabled', '');
-    localStorage.setItem('theme', 'light');
-    updateToggleLabel('dark');
-  }
-
-  function updateToggleLabel(nextTheme) {
-    if (!toggleButton) return;
-    toggleButton.setAttribute('aria-label', `Switch to ${nextTheme} mode`);
-    toggleButton.textContent = nextTheme === 'dark' ? '🌙' : '☀️';
-  }
-
-  // Toggle between themes when button clicked
-  if (toggleButton) {
-    toggleButton.addEventListener('click', () => {
-      const isDark = !darkStyle.hasAttribute('disabled');
-      if (isDark) {
-        disableDark();
-      } else {
-        enableDark();
-      }
-    });
-  }
-
-  initTheme();
+  const saved = getPref();
+  if (saved) applyTheme(saved);
+  document.addEventListener('click', function(e){
+    const t = e.target.closest('[data-toggle-theme]');
+    if (!t) return;
+    const current = getPref() || 'system';
+    const next = current === 'light' ? 'dark' : current === 'dark' ? 'system' : 'light';
+    setPref(next); applyTheme(next);
+    t.innerText = next === 'light' ? '🌞' : next === 'dark' ? '🌙' : '🖥️';
+  });
+  document.addEventListener('click', function(e){
+    const btn = e.target.closest('[data-menu-btn]');
+    if (!btn) return;
+    const links = document.querySelector('.nav-links');
+    if (links) links.classList.toggle('open');
+  });
 })();

@@ -4,46 +4,70 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Process – Kyle Colglazier</title>
+  <meta name="description" content="How I design: Diagnose, Design, Build, Launch & Measure.">
+  <meta name="theme-color" content="#1d4ed8">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Process – Kyle Colglazier">
+  <meta property="og:description" content="How I design: Diagnose, Design, Build, Launch & Measure.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kpcolgla.github.io/">
+  <meta property="og:image" content="https://kpcolgla.github.io/assets/images/og-image.png">
+  <meta property="og:image:alt" content="Kyle Colglazier portfolio preview">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Process – Kyle Colglazier">
+  <meta name="twitter:description" content="How I design: Diagnose, Design, Build, Launch & Measure.">
+  <meta name="twitter:image" content="https://kpcolgla.github.io/assets/images/og-image.png">
+
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/global.css">
   <link rel="stylesheet" href="assets/css/dark.css" media="(prefers-color-scheme: dark)">
-  <meta name="description" content="Kyle Colglazier – Learning Experience Design & Sales Enablement portfolio.">
-  <meta name="theme-color" content="#1d4ed8">
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to content</a>
 
-  <aside class="sidebar" aria-label="Primary navigation">
-    <img src="assets/images/headshot.jpg" alt="Kyle Colglazier headshot" class="headshot">
-    <h2>Kyle Colglazier</h2>
-    <p>Learning Experience Designer & Sales Enablement</p>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="work.html">Work</a>
-      <a href="process.html" aria-current="page">Process</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <div class="divider"></div>
-      <a href="resume.docx">Download Resume</a>
-    </nav>
-  </aside>
+  <header class="site-header" role="banner">
+    <div class="navbar">
+      <div class="brand">
+        <img src="assets/images/headshot.jpg" alt="Kyle Colglazier headshot" class="avatar">
+        <div>
+          <div class="name">Kyle Colglazier</div>
+          <p class="tagline">Learning Experience Design & Sales Enablement</p>
+        </div>
+      </div>
+      <button class="menu-btn" aria-controls="primary-navigation" aria-expanded="false" data-menu-btn>☰ Menu</button>
+      <nav id="primary-navigation" class="nav-links" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="work.html">Work</a>
+        <a href="process.html" aria-current="page">Process</a>
+        <a href="contact.html">Contact</a>
+        <a href="resume.docx">Resume</a>
+        <button class="theme-toggle" type="button" data-toggle-theme title="Toggle theme">🖥️</button>
+      </nav>
+    </div>
+  </header>
 
-  <main class="content" id="main">
-    
-<header>
+  <main id="main">
+    <div class="container">
+      
+<section class="section">
   <h1>Process</h1>
-  <p class="muted">My approach blends needs analysis, quick prototyping, and measurement to ship solutions that change behaviour.</p>
-</header>
-
-<section class="grid">
-  <article class="project-card"><h3>1) Diagnose</h3><p class="muted">Stakeholder interviews, data review, performance gaps, success metrics.</p></article>
-  <article class="project-card"><h3>2) Design</h3><p class="muted">Experience maps, content outlines, assessment strategy, accessibility.</p></article>
-  <article class="project-card"><h3>3) Build</h3><p class="muted">Rapid prototypes, SME loops, scalable templates, localization readiness.</p></article>
-  <article class="project-card"><h3>4) Launch & Measure</h3><p class="muted">Enablement, comms, dashboards, iteration cadence.</p></article>
+  <p class="muted">Diagnose → Design → Build → Launch & Measure. Ship solutions that change behaviour and performance.</p>
+</section>
+<section class="section">
+  <div class="grid">
+    <div class="grid-6"><article class="card"><h3>1) Diagnose</h3><p class="muted">Stakeholder interviews, data review, performance gaps, success metrics.</p></article></div>
+    <div class="grid-6"><article class="card"><h3>2) Design</h3><p class="muted">Experience maps, content outlines, assessment strategy, accessibility.</p></article></div>
+    <div class="grid-6"><article class="card"><h3>3) Build</h3><p class="muted">Rapid prototypes, SME loops, scalable templates, localization readiness.</p></article></div>
+    <div class="grid-6"><article class="card"><h3>4) Launch & Measure</h3><p class="muted">Enablement, comms, dashboards, iteration cadence.</p></article></div>
+  </div>
 </section>
 
-    <footer>© 2025 Kyle Colglazier • <a href="accessibility.html">Accessibility</a></footer>
+      <footer>© 2025 Kyle Colglazier • <a href="accessibility.html">Accessibility</a></footer>
+    </div>
   </main>
+
+  <script src="assets/js/theme.js"></script>
 </body>
 </html>
