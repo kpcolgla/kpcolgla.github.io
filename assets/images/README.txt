@@ -1,11 +1,4 @@
-These are placeholder images added to prevent 404s.
-Replace them with your real assets using the SAME filenames:
-- headshot.jpg
-- meta.svg
-- paypal-icon.svg
-- sidley.png
-- tamu-2021.svg
-- syracuse-s.svg
-- og-image.png
-
-Place them in /assets/images/ and commit.
+Web-optimized placeholders matching your expected filenames.
+Swap in official brand assets later using the SAME filenames for an instant upgrade.
+Files: meta.svg, paypal-icon.svg, tamu-2021.svg, syracuse-s.svg, sidley.png, og-image.png
+Drop into /assets/images/ in your repo.
