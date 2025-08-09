@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact – Kyle Colglazier</title>
+    <meta
+      name="description"
+      content="Get in touch with Kyle Colglazier to discuss learning experience design, instructional design projects or collaboration opportunities."
+    />
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link
+      rel="stylesheet"
+      href="assets/css/dark.css"
+      id="dark-mode-stylesheet"
+      disabled
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <a href="index.html" class="logo">Kyle&nbsp;Colglazier</a>
+          <div class="nav-links">
+            <a href="work.html">Work</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <button class="theme-toggle" data-theme-toggle aria-label="Switch theme">
+              🌙
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="container">
+      <h1 style="text-align: center; margin-top: 2rem;">Contact</h1>
+      <section class="contact">
+        <p>
+          I'd love to hear from you! Whether you have a project in mind, a
+          question about my work or just want to connect, please reach out via
+          the form below or email me directly at
+          <a href="mailto:kpcolgla@gmail.com" style="color: var(--accent);">
+            kpcolgla@gmail.com
+          </a>.
+        </p>
+        <form
+          action="https://formspree.io/f/mayylrny"
+          method="POST"
+          aria-label="Contact form"
+        >
+          <label class="sr-only" for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your name"
+            required
+            autocomplete="name"
+          />
+          <label class="sr-only" for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Your email"
+            required
+            autocomplete="email"
+          />
+          <label class="sr-only" for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            placeholder="How can I help you?"
+            required
+          ></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <p>&copy; <span id="year"></span> Kyle&nbsp;Colglazier. All rights reserved.</p>
+        <a href="accessibility.html" class="accessibility-link">Accessibility statement</a>
+      </div>
+    </footer>
+    <script src="assets/js/theme.js"></script>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

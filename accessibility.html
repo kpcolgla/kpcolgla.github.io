@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessibility Statement – Kyle Colglazier</title>
+    <meta
+      name="description"
+      content="Accessibility statement for Kyle Colglazier's portfolio."
+    />
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link
+      rel="stylesheet"
+      href="assets/css/dark.css"
+      id="dark-mode-stylesheet"
+      disabled
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <a href="index.html" class="logo">Kyle&nbsp;Colglazier</a>
+          <div class="nav-links">
+            <a href="work.html">Work</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <button class="theme-toggle" data-theme-toggle aria-label="Switch theme">
+              🌙
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="container">
+      <h1 style="text-align: center; margin-top: 2rem;">Accessibility Statement</h1>
+      <p style="margin-top: 2rem;">
+        I am committed to ensuring this website is accessible to everyone. This site
+        follows the
+        <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank" rel="noopener noreferrer" style="color: var(--accent);">
+          Web Content Accessibility Guidelines (WCAG) 2.2 AA
+        </a>
+        wherever possible.
+      </p>
+      <p>
+        If you encounter any barriers or have difficulty accessing content on this
+        site, please contact me at
+        <a href="mailto:kpcolgla@gmail.com" style="color: var(--accent);">kpcolgla@gmail.com</a>
+        so that I can assist you and make improvements.
+      </p>
+    </main>
+    <footer>
+      <div class="container">
+        <p>&copy; <span id="year"></span> Kyle&nbsp;Colglazier. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="assets/js/theme.js"></script>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

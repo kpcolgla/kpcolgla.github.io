@@ -1,53 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Selected Work – Kyle Colglazier</title>
-  <meta name="description" content="Detailed case summaries of my instructional design projects." />
-  <link rel="stylesheet" href="/assets/style.css" />
-</head>
-<body>
-  <nav>
-    <div class="inner wrap">
-      <div class="brand">Kyle Colglazier</div>
-      <div class="nav-links">
-        <a href="/work.html">Work</a>
-        <a href="/process.html">Process</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Work – Kyle Colglazier</title>
+    <meta
+      name="description"
+      content="Browse selected learning experience design projects by Kyle Colglazier."
+    />
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link
+      rel="stylesheet"
+      href="assets/css/dark.css"
+      id="dark-mode-stylesheet"
+      disabled
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <a href="index.html" class="logo">Kyle&nbsp;Colglazier</a>
+          <div class="nav-links">
+            <a href="work.html">Work</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <button class="theme-toggle" data-theme-toggle aria-label="Switch theme">
+              🌙
+            </button>
+          </div>
+        </nav>
       </div>
-      <button id="theme-toggle" aria-label="Toggle theme"></button>
-    </div>
-  </nav>
-
-  <main class="wrap">
-    <section class="hero">
-      <h1>Selected Work</h1>
-      <p>Explore the projects I've designed and delivered.</p>
-    </section>
-
-    <section id="paypal">
-      <h2>PayPal — Sales Training Support</h2>
-      <p>I supported global sales enablement with AI-powered role‑play simulations and modular content to help reps practise objections and ramp up quickly.</p>
-    </section>
-
-    <section id="meta">
-      <h2>Meta — Digital Marketing Certification</h2>
-      <p>I created e‑learning and virtual sessions for Meta’s Blueprint certification, helping small businesses and agencies adopt ad products and earn certification.</p>
-    </section>
-
-    <section id="sidley">
-      <h2>Sidley Austin LLP — Compliance & Leadership</h2>
-      <p>I designed scenario‑based compliance and leadership training with interactive modules and video, ensuring lawyers and staff stayed up‑to‑date without extra burden.</p>
-    </section>
-
-    <section id="teaching">
-      <h2>University Teaching — Public Speaking</h2>
-      <p>I taught fundamental public speaking skills at Syracuse University and Texas A&M, helping students communicate clearly and confidently.</p>
-    </section>
-  </main>
-
-  <script defer src="/assets/script.js"></script>
-</body>
+    </header>
+    <main class="container">
+      <h1 style="text-align: center; margin-top: 2rem;">Work</h1>
+      <p style="text-align: center; max-width: 650px; margin: 1rem auto; color: var(--text-secondary);">
+        Explore a curated collection of my learning experience design and instructional design projects. Each case study will include objectives, design process, artifacts and outcomes. Content coming soon.
+      </p>
+      <div class="filter-bar" aria-label="Filter projects">
+        <button class="active">All</button>
+        <button>Onboarding</button>
+        <button>Sales&nbsp;Enablement</button>
+        <button>AI&nbsp;Simulations</button>
+        <button>Compliance</button>
+      </div>
+      <div class="projects">
+        <a href="work/onboarding/index.html" class="project-card">
+          <h3>Sales Onboarding Redesign</h3>
+          <p>Cut ramp time and improved coaching. Coming soon.</p>
+          <span class="badge">Coming Soon</span>
+        </a>
+        <a href="work/ai-sim/index.html" class="project-card">
+          <h3>AI Role‑Play Simulations</h3>
+          <p>Scaled objection handling practice. Coming soon.</p>
+          <span class="badge">Coming Soon</span>
+        </a>
+        <a href="work/certification/index.html" class="project-card">
+          <h3>Certification &amp; Training</h3>
+          <p>Interactive training and certification. Coming soon.</p>
+          <span class="badge">Coming Soon</span>
+        </a>
+        <a href="work/lms-migration/index.html" class="project-card">
+          <h3>LMS Migration &amp; Analytics</h3>
+          <p>Migration and analytics management. Coming soon.</p>
+          <span class="badge">Coming Soon</span>
+        </a>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <p>&copy; <span id="year"></span> Kyle&nbsp;Colglazier. All rights reserved.</p>
+        <a href="accessibility.html" class="accessibility-link">Accessibility statement</a>
+      </div>
+    </footer>
+    <script src="assets/js/theme.js"></script>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
 </html>

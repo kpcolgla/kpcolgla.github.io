@@ -1,90 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Kyle Colglazier — Portfolio</title>
-  <meta name="description" content="I create learning experiences people actually use — grounded in theory and guided by metrics." />
-  <link rel="stylesheet" href="/assets/style.css" />
-</head>
-<body>
-  <nav>
-    <div class="inner wrap">
-      <div class="brand">Kyle Colglazier</div>
-      <div class="nav-links">
-        <a href="/work.html">Work</a>
-        <a href="/process.html">Process</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kyle Colglazier – Learning Experience Designer</title>
+    <meta
+      name="description"
+      content="Portfolio of Kyle Colglazier, a learning experience designer specializing in sales enablement and instructional design."
+    />
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link
+      rel="stylesheet"
+      href="assets/css/dark.css"
+      id="dark-mode-stylesheet"
+      disabled
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <a href="index.html" class="logo" aria-label="Kyle Colglazier home">
+            Kyle&nbsp;Colglazier
+          </a>
+          <div class="nav-links">
+            <a href="work.html">Work</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <button class="theme-toggle" data-theme-toggle aria-label="Switch theme">
+              🌙
+            </button>
+          </div>
+        </nav>
       </div>
-      <button id="theme-toggle" aria-label="Toggle theme"></button>
-    </div>
-  </nav>
-
-  <main class="wrap">
-    <section class="hero" id="home">
-      <div class="avatar">
-        <picture>
-          <source srcset="/assets/img/headshot-512.webp" type="image/webp">
-          <source srcset="/assets/img/headshot.jpg" type="image/jpeg">
-          <img src="/assets/img/headshot.jpg" alt="Kyle Colglazier headshot" decoding="async" fetchpriority="high">
-        </picture>
-      </div>
-      <div>
-        <h1>Hi, I’m Kyle — Instructional Designer & Learning Strategist</h1>
-        <p>I create learning experiences people actually use — grounded in theory and guided by metrics.</p>
-        <div class="ctas">
-          <a class="btn" href="mailto:kpcolgla@gmail.com">Contact Me</a>
-          <a class="btn alt" href="https://www.linkedin.com/in/kyle-colglazier/" target="_blank" rel="noopener">LinkedIn</a>
+    </header>
+    <main>
+      <section class="hero">
+        <h1>Designing learning experiences that accelerate performance</h1>
+        <p>
+          I craft evidence‑based, human‑centered learning that empowers sales
+          teams, elevates onboarding and delivers measurable outcomes. Explore
+          selected projects and get in touch to collaborate.
+        </p>
+        <div class="button-group">
+          <a href="work.html" class="btn primary">View Work</a>
+          <a href="contact.html" class="btn secondary">Contact</a>
+          <!-- Link to download resume -->
+          <a href="resume.docx" class="btn tertiary" download>Download Resume</a>
         </div>
+      </section>
+      <section class="container">
+        <h2 style="text-align: center; margin-bottom: 2rem;">Featured Projects</h2>
+        <div class="projects">
+          <!-- Project card 1 -->
+          <a href="work/onboarding/index.html" class="project-card">
+            <h3>Sales Onboarding Redesign</h3>
+            <p>
+              Cut ramp time and improved manager coaching with a blended
+              onboarding experience. Case study coming soon.
+            </p>
+            <span class="badge">Coming Soon</span>
+          </a>
+          <!-- Project card 2 -->
+          <a href="work/ai-sim/index.html" class="project-card">
+            <h3>AI Role‑Play Simulations</h3>
+            <p>
+              Scaled objection handling practice using AI‑powered role‑play and
+              feedback. Case study coming soon.
+            </p>
+            <span class="badge">Coming Soon</span>
+          </a>
+          <!-- Project card 3 -->
+          <a href="work/certification/index.html" class="project-card">
+            <h3>Certification &amp; Training Programs</h3>
+            <p>
+              Built certification pathways and interactive training modules.
+              Case study coming soon.
+            </p>
+            <span class="badge">Coming Soon</span>
+          </a>
+          <!-- Project card 4 -->
+          <a href="work/lms-migration/index.html" class="project-card">
+            <h3>LMS Migration &amp; Analytics</h3>
+            <p>
+              Managed migration to a new LMS, governance and xAPI analytics.
+              Case study coming soon.
+            </p>
+            <span class="badge">Coming Soon</span>
+          </a>
+        </div>
+      </section>
+      <section class="logo-strip" aria-label="Previous collaborators">
+        <!-- Updated logo file names to use the latest assets downloaded -->
+        <img src="assets/images/meta.svg" alt="Meta" />
+        <img src="assets/images/paypal-icon.svg" alt="PayPal" />
+        <img src="assets/images/sidley.png" alt="Sidley Austin LLP" />
+        <img src="assets/images/tamu-2021.svg" alt="Texas A&amp;M University" />
+        <img src="assets/images/syracuse-s.svg" alt="Syracuse University" />
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <p>&copy; <span id="year"></span> Kyle&nbsp;Colglazier. All rights reserved.</p>
+        <a
+          href="accessibility.html"
+          class="accessibility-link"
+          >Accessibility statement</a
+        >
       </div>
-    </section>
-
-    <section id="work">
-      <h2>Selected Work</h2>
-      <div class="cards">
-        <article class="card">
-          <h3>PayPal — Sales Training Support</h3>
-          <p>AI-powered role-play sims and modular content helped sales reps ramp up and practise objections.</p>
-          <div class="tags"><span class="tag">Onboarding</span><span class="tag">AI</span></div>
-          <a href="/work.html#paypal" class="btn alt">View details</a>
-        </article>
-
-        <article class="card">
-          <h3>Meta — Digital Marketing Certification</h3>
-          <p>Developed eLearning and vILT sessions to help SMBs adopt Meta ads and get certified.</p>
-          <div class="tags"><span class="tag">eLearning</span><span class="tag">vILT</span></div>
-          <a href="/work.html#meta" class="btn alt">View details</a>
-        </article>
-
-        <article class="card">
-          <h3>Sidley Austin LLP — Compliance & Leadership</h3>
-          <p>Scenario-based modules with video and interactives delivered compliance training without extra burden.</p>
-          <div class="tags"><span class="tag">Compliance</span></div>
-          <a href="/work.html#sidley" class="btn alt">View details</a>
-        </article>
-
-        <article class="card">
-          <h3>University Teaching — Public Speaking</h3>
-          <p>Taught fundamentals of public speaking at Syracuse University and Texas A&M.</p>
-          <div class="tags"><span class="tag">Teaching</span></div>
-          <a href="/work.html#teaching" class="btn alt">View details</a>
-        </article>
-      </div>
-    </section>
-
-    <section id="about">
-      <h2>About</h2>
-      <p>I blend higher education and corporate training to design learning that’s clear, measurable and worth your time.</p>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:kpcolgla@gmail.com">kpcolgla@gmail.com</a> · Phone: <a href="tel:+13093383943">(309) 338-3943</a></p>
-      <p><a href="https://github.com/kpcolgla" target="_blank" rel="noopener">GitHub</a> · <a href="https://www.linkedin.com/in/kyle-colglazier/" target="_blank" rel="noopener">LinkedIn</a></p>
-    </section>
-  </main>
-
-  <script defer src="/assets/script.js"></script>
-</body>
+    </footer>
+    <!-- Scripts -->
+    <script src="assets/js/theme.js"></script>
+    <script>
+      // Update footer year
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
 </html>

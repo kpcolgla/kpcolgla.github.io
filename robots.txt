@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Point to the sitemap for search engines
+Sitemap: https://kpcolgla.github.io/sitemap.xml
