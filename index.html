@@ -4,40 +4,35 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Kyle Colglazier — Portfolio</title>
-  <!-- Description for SEO -->
-  <meta name="description" content="I create learning experiences people actually use — grounded in theory, guided by metrics, and built to scale." />
-  <!-- Link to compiled styles -->
+  <meta name="description" content="I create learning experiences people actually use — grounded in theory and guided by metrics." />
   <link rel="stylesheet" href="/assets/style.css" />
 </head>
 <body>
-  <!-- Navigation with brand, links and theme toggle button -->
   <nav>
     <div class="inner wrap">
       <div class="brand">Kyle Colglazier</div>
       <div class="nav-links">
-        <a href="#work">Work</a>
+        <a href="/work.html">Work</a>
         <a href="/process.html">Process</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </div>
-      <!-- Theme toggle button will be populated by script.js (sun/moon icon) -->
-      <button id="theme-toggle" aria-label="Toggle theme">☀️</button>
+      <button id="theme-toggle" aria-label="Toggle theme"></button>
     </div>
   </nav>
 
   <main class="wrap">
-    <!-- Hero section with headshot and intro text -->
     <section class="hero" id="home">
       <div class="avatar">
         <picture>
           <source srcset="/assets/img/headshot-512.webp" type="image/webp">
           <source srcset="/assets/img/headshot.jpg" type="image/jpeg">
-          <img src="/assets/img/headshot.jpg" alt="Kyle Colglazier headshot" decoding="async" fetchpriority="high" />
+          <img src="/assets/img/headshot.jpg" alt="Kyle Colglazier headshot" decoding="async" fetchpriority="high">
         </picture>
       </div>
       <div>
         <h1>Hi, I’m Kyle — Instructional Designer & Learning Strategist</h1>
-        <p>I create learning experiences people actually use — grounded in theory, guided by metrics, and built to scale.</p>
+        <p>I create learning experiences people actually use — grounded in theory and guided by metrics.</p>
         <div class="ctas">
           <a class="btn" href="mailto:kpcolgla@gmail.com">Contact Me</a>
           <a class="btn alt" href="https://www.linkedin.com/in/kyle-colglazier/" target="_blank" rel="noopener">LinkedIn</a>
@@ -45,70 +40,51 @@
       </div>
     </section>
 
-    <!-- Selected Work section with filter chips and project cards -->
     <section id="work">
       <h2>Selected Work</h2>
-      <div class="filters" aria-label="Filter projects">
-        <button class="chip active" data-filter="all">All</button>
-        <button class="chip" data-filter="onboarding">Onboarding</button>
-        <button class="chip" data-filter="ai">AI Practice</button>
-        <button class="chip" data-filter="compliance">Compliance</button>
-        <button class="chip" data-filter="teaching">Teaching</button>
-      </div>
       <div class="cards">
-        <article class="card" data-tags="onboarding ai fintech">
-          <h3>Global Sales Enablement — PayPal</h3>
-          <p>Created training across global sales teams—AI role‑plays and onboarding support.</p>
+        <article class="card">
+          <h3>PayPal — Sales Training Support</h3>
+          <p>AI-powered role-play sims and modular content helped sales reps ramp up and practise objections.</p>
           <div class="tags"><span class="tag">Onboarding</span><span class="tag">AI</span></div>
-          <button class="btn more" data-case="paypal">Quick view</button>
+          <a href="/work.html#paypal" class="btn alt">View details</a>
         </article>
-        <article class="card" data-tags="elearning">
-          <h3>Digital Marketing Certification — Meta</h3>
-          <p>Built global e‑learning for Meta’s Blueprint program—helping SMBs and agencies master ad products.</p>
+
+        <article class="card">
+          <h3>Meta — Digital Marketing Certification</h3>
+          <p>Developed eLearning and vILT sessions to help SMBs adopt Meta ads and get certified.</p>
           <div class="tags"><span class="tag">eLearning</span><span class="tag">vILT</span></div>
-          <button class="btn more" data-case="meta">Quick view</button>
+          <a href="/work.html#meta" class="btn alt">View details</a>
         </article>
-        <article class="card" data-tags="compliance">
-          <h3>Leadership & Compliance — Sidley Austin LLP</h3>
-          <p>Crafted scenario‑based leadership & compliance training for attorneys and staff.</p>
+
+        <article class="card">
+          <h3>Sidley Austin LLP — Compliance & Leadership</h3>
+          <p>Scenario-based modules with video and interactives delivered compliance training without extra burden.</p>
           <div class="tags"><span class="tag">Compliance</span></div>
-          <button class="btn more" data-case="sidley">Quick view</button>
+          <a href="/work.html#sidley" class="btn alt">View details</a>
         </article>
-        <article class="card" data-tags="teaching">
-          <h3>Public Speaking — University Teaching</h3>
-          <p>Earlier in my career, I taught public speaking at Syracuse University and Texas A&M, helping students develop clear, confident communication.</p>
+
+        <article class="card">
+          <h3>University Teaching — Public Speaking</h3>
+          <p>Taught fundamentals of public speaking at Syracuse University and Texas A&M.</p>
           <div class="tags"><span class="tag">Teaching</span></div>
-          <button class="btn more" data-case="uni">Quick view</button>
+          <a href="/work.html#teaching" class="btn alt">View details</a>
         </article>
       </div>
     </section>
 
-    <!-- About section -->
     <section id="about">
       <h2>About</h2>
-      <p>I’ve spent my career designing learning that people actually want to use. I bridge higher education, corporate training and global sales enablement — focusing on communication, adult learning theory and measurable impact.</p>
+      <p>I blend higher education and corporate training to design learning that’s clear, measurable and worth your time.</p>
     </section>
 
-    <!-- Contact section -->
     <section id="contact">
       <h2>Contact</h2>
-      <p>Email: <a href="mailto:kpcolgla@gmail.com">kpcolgla@gmail.com</a> · Phone: <a href="tel:+13093383943">(309) 338‑3943</a></p>
+      <p>Email: <a href="mailto:kpcolgla@gmail.com">kpcolgla@gmail.com</a> · Phone: <a href="tel:+13093383943">(309) 338-3943</a></p>
       <p><a href="https://github.com/kpcolgla" target="_blank" rel="noopener">GitHub</a> · <a href="https://www.linkedin.com/in/kyle-colglazier/" target="_blank" rel="noopener">LinkedIn</a></p>
     </section>
   </main>
 
-  <!-- Quick view modal container -->
-  <div id="case-modal" hidden role="dialog" aria-modal="true" aria-labelledby="case-title">
-    <div class="case-backdrop"></div>
-    <div class="case-content">
-      <button class="close" aria-label="Close">×</button>
-      <h3 id="case-title"></h3>
-      <p class="kicker"></p>
-      <ul class="bullets"></ul>
-    </div>
-  </div>
-
-  <!-- Load interactive behaviours -->
   <script defer src="/assets/script.js"></script>
 </body>
 </html>
