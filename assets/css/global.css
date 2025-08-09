@@ -1,30 +1,4 @@
-/* Global styles for Kyle Colglazier’s portfolio.
-   Define typography, layout helpers and component classes.
-   Light theme colours are declared as CSS custom properties on the :root element.
-   Dark theme overrides these variables in dark.css. */
-
-/* Reset basic elements */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  font-size: 16px;
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  line-height: 1.6;
-  color: var(--text-primary);
-  background-color: var(--bg);
-  transition: background-color 0.3s, color 0.3s;
-}
-
-/* Colour palette for the light theme */
+/* ===== Light Theme Colors ===== */
 :root {
   --bg: #ffffff;
   --bg-secondary: #f8f9fa;
@@ -33,380 +7,84 @@ body {
   --accent: #0066cc;
   --accent-hover: #004e99;
   --border: #e0e0e0;
-  /* Card background colour: separate variable for easier theming */
   --card-bg: #f8f9fa;
+  font-family: 'Inter', sans-serif;
 }
 
-/* Layout */
-.container {
-  width: 90%;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 2rem 0;
-}
-
-header {
+/* ===== Global Reset ===== */
+body {
   background-color: var(--bg);
-  border-bottom: 1px solid var(--border);
-  position: sticky;
+  color: var(--text-primary);
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* ===== Links ===== */
+a:link {
+  color: var(--accent);
+  text-decoration: underline;
+}
+a:visited {
+  color: var(--accent-hover);
+}
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+/* ===== Sidebar Layout ===== */
+.sidebar {
+  position: fixed;
   top: 0;
-  z-index: 1000;
+  left: 0;
+  height: 100vh;
+  width: 220px;
+  background: var(--bg-secondary);
+  border-right: 1px solid var(--border);
+  padding: 1.5rem;
 }
-
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 0;
-}
-
-nav .logo {
-  font-weight: 700;
-  font-size: 1.25rem;
-  text-decoration: none;
-  color: var(--text-primary);
-}
-
-nav .nav-links {
-  display: flex;
-  gap: 1.5rem;
-}
-
-nav .nav-links a {
-  text-decoration: none;
-  color: var(--text-secondary);
-  font-weight: 500;
-  transition: color 0.2s;
-}
-
-nav .nav-links a:hover {
-  color: var(--accent);
-}
-
-nav .theme-toggle {
-  cursor: pointer;
-  border: none;
-  background: none;
-  font-size: 1rem;
-}
-
-/* Hero section */
-.hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 4rem 0 3rem;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 2.25rem;
-  margin-bottom: 1rem;
-  line-height: 1.2;
-}
-
-.hero p {
-  font-size: 1.125rem;
-  margin-bottom: 2rem;
-  max-width: 650px;
-  color: var(--text-secondary);
-}
-
-.button-group {
-  display: flex;
-  gap: 1rem;
-}
-
-.btn {
-  display: inline-block;
-  padding: 0.75rem 1.25rem;
-  border: 2px solid var(--accent);
-  border-radius: 0.375rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
-  cursor: pointer;
-}
-
-.btn.primary {
-  background-color: var(--accent);
-  color: #fff;
-}
-
-.btn.primary:hover {
-  background-color: var(--accent-hover);
-  border-color: var(--accent-hover);
-}
-
-.btn.secondary {
-  background-color: transparent;
-  color: var(--accent);
-}
-
-.btn.secondary:hover {
-  background-color: var(--bg-secondary);
-}
-
-/* Tertiary button style for less prominent actions (e.g., resume download) */
-.btn.tertiary {
-  background-color: transparent;
-  color: var(--text-primary);
-  border-color: var(--border);
-}
-
-.btn.tertiary:hover {
-  background-color: var(--bg-secondary);
-}
-
-/* Site headshot: displayed below the navigation on every page */
-.site-headshot {
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-.site-headshot img {
+.sidebar img {
   width: 120px;
-  height: 120px;
   border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid var(--border);
+  margin-bottom: 1rem;
 }
-
-@media (min-width: 768px) {
-  .site-headshot img {
-    width: 160px;
-    height: 160px;
-  }
+.sidebar nav a {
+  display: block;
+  margin: 0.5rem 0;
+  font-weight: 600;
+  color: var(--accent);
 }
-
-/* Project cards */
-.projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin-top: 3rem;
-}
-
-.project-card {
-  /* Modern card design: use card background variable for light/dark themes,
-     remove borders, increase padding and add a soft shadow */
-  background-color: var(--card-bg);
-  border: none;
-  border-radius: 0.75rem;
+.content {
+  margin-left: 220px;
   padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-  transition: box-shadow 0.2s, transform 0.2s;
 }
 
+/* ===== Project Cards ===== */
+.project-card {
+  background-color: var(--card-bg);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 .project-card:hover {
-  /* Increase elevation on hover */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
   transform: translateY(-4px);
 }
 
-.project-card h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
+/* ===== Headings ===== */
+h1, h2, h3, h4 {
+  margin-top: 0;
 }
 
-.project-card p {
-  font-size: 0.95rem;
-  color: var(--text-secondary);
-  flex: 1;
-}
-
-.project-card .badge {
-  display: inline-block;
-  background-color: var(--accent);
-  color: #fff;
-  padding: 0.3rem 0.9rem;
-  border-radius: 9999px;
-  font-size: 0.75rem;
-  margin-top: 0.75rem;
-}
-
-/* Social proof logos */
-.logo-strip {
+/* ===== Logo Row ===== */
+.logo-row {
   display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  align-items: center;
-  justify-content: center;
-  margin-top: 3rem;
-  padding: 2rem 0;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
-
-.logo-strip img {
-  height: 40px;
-  width: auto;
-  max-width: 120px;
-  object-fit: contain;
-  filter: grayscale(100%);
-  opacity: 0.8;
-  transition: filter 0.2s, opacity 0.2s;
-}
-
-.logo-strip img:hover {
-  filter: grayscale(0%);
-  opacity: 1;
-}
-
-/* Footer */
-footer {
-  background-color: var(--bg);
-  border-top: 1px solid var(--border);
-  padding: 2rem 0;
-  text-align: center;
-  font-size: 0.875rem;
-  color: var(--text-secondary);
-}
-
-footer a {
-  color: var(--accent);
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-/* Work page */
-.filter-bar {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 2rem;
-}
-
-.filter-bar button {
-  padding: 0.5rem 1rem;
-  border: 1px solid var(--border);
-  border-radius: 9999px;
-  background-color: var(--bg-secondary);
-  color: var(--text-secondary);
-  cursor: pointer;
-  font-size: 0.875rem;
-  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
-}
-
-.filter-bar button.active,
-.filter-bar button:hover {
-  background-color: var(--accent);
-  color: #fff;
-  border-color: var(--accent);
-}
-
-/* About page */
-.about {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 2rem;
-}
-
-.about img {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid var(--border);
-}
-
-.about .bio {
-  max-width: 700px;
-  color: var(--text-secondary);
-}
-
-.about .skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  justify-content: center;
-  margin-top: 1.5rem;
-}
-
-.about .skills span {
-  background-color: var(--bg-secondary);
-  border: 1px solid var(--border);
-  padding: 0.4rem 1rem;
-  border-radius: 9999px;
-  font-size: 0.875rem;
-  color: var(--text-secondary);
-}
-
-/* Contact page */
-.contact {
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.contact form {
-  display: flex;
-  flex-direction: column;
   gap: 1rem;
-  margin-top: 2rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
 }
-
-.contact input,
-.contact textarea {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid var(--border);
-  border-radius: 0.375rem;
-  font-size: 0.875rem;
-  resize: vertical;
-}
-
-.contact button {
-  align-self: flex-start;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 0.375rem;
-  background-color: var(--accent);
-  color: #fff;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-
-.contact button:hover {
-  background-color: var(--accent-hover);
-}
-
-/* Accessibility statement link in footer */
-.accessibility-link {
-  display: block;
-  margin-top: 0.5rem;
-  font-size: 0.75rem;
-}
-
-/* Utility classes */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
-@media (min-width: 768px) {
-  .hero h1 {
-    font-size: 3rem;
-  }
-  .hero p {
-    font-size: 1.25rem;
-  }
+.logo-row img {
+  height: 40px;
 }
