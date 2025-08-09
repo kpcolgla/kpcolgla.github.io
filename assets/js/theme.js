@@ -1,26 +1,24 @@
+
 (function(){
-  const STORAGE_KEY = 'theme-preference';
-  const getPref = () => localStorage.getItem(STORAGE_KEY);
-  const setPref = v => localStorage.setItem(STORAGE_KEY, v);
-  function applyTheme(pref){
-    if (pref === 'light') document.documentElement.classList.remove('dark');
-    else if (pref === 'dark') document.documentElement.classList.add('dark');
-    else document.documentElement.classList.remove('dark');
+  const KEY='theme-preference';
+  const get=()=>localStorage.getItem(KEY);
+  const set=v=>localStorage.setItem(KEY,v);
+  function apply(v){
+    if(v==='dark'){ document.documentElement.classList.add('dark'); }
+    else if(v==='light'){ document.documentElement.classList.remove('dark'); }
+    else { document.documentElement.classList.remove('dark'); } // system default
   }
-  const saved = getPref();
-  if (saved) applyTheme(saved);
-  document.addEventListener('click', function(e){
-    const t = e.target.closest('[data-toggle-theme]');
-    if (!t) return;
-    const current = getPref() || 'system';
-    const next = current === 'light' ? 'dark' : current === 'dark' ? 'system' : 'light';
-    setPref(next); applyTheme(next);
-    t.innerText = next === 'light' ? '🌞' : next === 'dark' ? '🌙' : '🖥️';
+  const saved=get(); if(saved) apply(saved);
+  document.addEventListener('click', (e)=>{
+    const t=e.target.closest('[data-toggle-theme]'); if(!t) return;
+    const cur=get()||'system';
+    const next= cur==='light'?'dark': cur==='dark'?'system':'light';
+    set(next); apply(next);
+    t.textContent = next==='light'?'🌞': next==='dark'?'🌙':'🖥️';
+    t.setAttribute('aria-label','Theme: '+next);
   });
-  document.addEventListener('click', function(e){
-    const btn = e.target.closest('[data-menu-btn]');
-    if (!btn) return;
-    const links = document.querySelector('.nav-links');
-    if (links) links.classList.toggle('open');
+  document.addEventListener('click',(e)=>{
+    const b=e.target.closest('[data-menu-btn]'); if(!b) return;
+    const n=document.querySelector('.nav-links'); if(n) n.classList.toggle('open');
   });
 })();
