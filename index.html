@@ -1,80 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Kyle Colglazier — Portfolio</title>
-  <meta name="description" content="Portfolio site for Kyle Colglazier, Learning Experience Designer and Sales Trainer." />
-  <meta property="og:title" content="Kyle Colglazier — Learning Experience Designer" />
-  <meta property="og:description" content="Portfolio site for Kyle Colglazier, Learning Experience Designer and Sales Trainer." />
-  <meta property="og:image" content="/assets/opengraph.jpg" />
-  <meta property="og:url" content="https://kpcolgla.github.io/" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
-  <link rel="manifest" href="/site.webmanifest" />
+  <meta name="description" content="I create learning experiences that actually work — from global sales enablement to university classrooms." />
   <link rel="stylesheet" href="/assets/style.css" />
 </head>
 <body>
-  <div class="progress-container">
-    <div id="progress" class="progress-bar"></div>
-  </div>
   <nav>
-    <div class="logo">Kyle Colglazier</div>
-    <div class="nav-links">
-      <a href="#home" class="active">Home</a>
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+    <div class="inner wrap">
+      <div class="brand">Kyle Colglazier</div>
+      <div class="nav-links">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
     </div>
   </nav>
-  <main id="home">
-    <section class="hero section-visible">
-      <img src="/assets/headshot.jpg" alt="Kyle Colglazier headshot" />
-      <div class="hero-text">
-        <h1>Instructional Design &amp; Sales Enablement</h1>
-        <p>I create high‑impact onboarding, accreditation and AI‑powered practice for fintech GTM teams and beyond. I help people build confidence and perform at their best.</p>
-        <div class="cta-buttons">
-          <a href="mailto:kpcolgla@gmail.com" class="cta-primary">Contact Kyle</a>
-          <a href="/resume/Kyle_Colglazier.pdf" class="cta-secondary" download>Download résumé</a>
+
+  <main class="wrap">
+    <section class="hero" id="home">
+      <div class="avatar">
+        <img src="/assets/img/headshot.jpg" alt="Kyle Colglazier headshot" />
+      </div>
+      <div>
+        <h1>Hi, I’m Kyle — Instructional Designer & Learning Strategist</h1>
+        <p>I create learning experiences that actually work. From global sales enablement to university classrooms, I help people build confidence, master new skills, and perform at their best.</p>
+        <div class="ctas">
+          <a class="btn" href="mailto:kpcolgla@gmail.com">Contact Me</a>
+          <a class="btn alt" href="https://www.linkedin.com/in/kyle-colglazier/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div>
     </section>
-    <section id="work" class="section-hidden">
+
+    <section id="work">
       <h2>Selected Work</h2>
+
+      <div class="filters" aria-label="Filter projects">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="onboarding">Onboarding</button>
+        <button class="chip" data-filter="ai">AI Practice</button>
+        <button class="chip" data-filter="compliance">Compliance</button>
+        <button class="chip" data-filter="teaching">Teaching</button>
+      </div>
+
       <div class="cards">
-        <div class="card">
-          <h3>PayPal • Global Enablement</h3>
-          <p>Relaunched a 6‑week GTM onboarding program, integrating AI‑driven role‑play simulations to reduce ramp time by 30% for 500+ reps.</p>
-        </div>
-        <div class="card">
-          <h3>Meta • Certification Curriculum</h3>
-          <p>Developed the digital marketing certification and exam prep program adopted by 100K+ learners worldwide.</p>
-        </div>
-        <div class="card">
-          <h3>Top Law Firm • Attorney Training</h3>
-          <p>Designed and delivered accredited professional development for 4,000 attorneys, boosting satisfaction scores by 25%.</p>
-        </div>
-        <div class="card">
-          <h3>University Teaching</h3>
-          <p>Taught over 1,000 students at Texas A&amp;M and Syracuse, igniting confidence in public speaking and persuasive storytelling.</p>
-        </div>
+        <article class="card" data-tags="onboarding ai fintech">
+          <h3>Global Sales Enablement — PayPal</h3>
+          <p>At PayPal, I designed and delivered training for sales teams across the globe. I built AI-powered role-play simulations to sharpen objection handling and value discovery skills, and I supported the relaunch of large-scale onboarding programs.</p>
+          <div class="tags"><span class="tag">Onboarding</span><span class="tag">AI</span></div>
+          <button class="btn more" data-case="paypal">Quick view</button>
+        </article>
+
+        <article class="card" data-tags="">
+          <h3>Digital Marketing Certification — Meta</h3>
+          <p>While working with Meta, I developed eLearning and vILT for the Blueprint certification program. I helped global SMBs and agencies use Meta ad products effectively—and get certified.</p>
+          <div class="tags"><span class="tag">eLearning</span><span class="tag">vILT</span></div>
+          <button class="btn more" data-case="meta">Quick view</button>
+        </article>
+
+        <article class="card" data-tags="compliance">
+          <h3>Leadership & Compliance — Sidley Austin LLP</h3>
+          <p>I created scenario-based training that blended video, interactive modules, and assessments to keep completion high and retention strong, without disrupting client work.</p>
+          <div class="tags"><span class="tag">Compliance</span></div>
+          <button class="btn more" data-case="sidley">Quick view</button>
+        </article>
+
+        <article class="card" data-tags="teaching">
+          <h3>Public Speaking — University Teaching</h3>
+          <p>Earlier in my career, I taught public speaking at Syracuse University and Texas A&M, helping students develop clear, confident communication.</p>
+          <div class="tags"><span class="tag">Teaching</span></div>
+          <button class="btn more" data-case="uni">Quick view</button>
+        </article>
       </div>
     </section>
-    <section id="about" class="section-hidden">
+
+    <section id="about">
       <h2>About</h2>
-      <p>Based in Chicago, I&#39;m a Learning Experience Designer and Sales Trainer with a background spanning higher education, big tech, fintech and legal services. I&#39;ve built global programs that scale, stick and support revenue teams. I love combining clear communication with engaging, performance‑driven experiences.</p>
+      <p>I’ve spent my career designing learning that people actually want to use. My background blends higher education, corporate training, and global sales enablement—and my approach is grounded in communication skills, adult learning theory, and a focus on measurable impact. Whether it’s building a new program or improving one already in place, I care about making the learning clear, relevant, and worth the time.</p>
     </section>
-    <section id="contact" class="section-hidden">
+
+    <section id="contact">
       <h2>Contact</h2>
-      <p>Let’s work together. Reach out via email or connect with me on social media.</p>
-      <div class="contact-links">
-        <a href="mailto:kpcolgla@gmail.com">Email</a>
-        <a href="tel:+13093383943">Call</a>
-        <a href="https://www.linkedin.com/in/kyle-colglazier/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://github.com/kpcolgla" target="_blank" rel="noopener">GitHub</a>
-      </div>
+      <p>Email: <a href="mailto:kpcolgla@gmail.com">kpcolgla@gmail.com</a> · Phone: <a href="tel:+13093383943">(309) 338-3943</a></p>
+      <p><a href="https://github.com/kpcolgla" target="_blank" rel="noopener">GitHub</a> · <a href="https://www.linkedin.com/in/kyle-colglazier/" target="_blank" rel="noopener">LinkedIn</a></p>
     </section>
   </main>
-  <script src="/assets/script.js"></script>
+
+  <!-- Quick view modal -->
+  <div id="case-modal" hidden role="dialog" aria-modal="true" aria-labelledby="case-title">
+    <div class="case-backdrop"></div>
+    <div class="case-content">
+      <button class="close" aria-label="Close">×</button>
+      <h3 id="case-title"></h3>
+      <p class="kicker"></p>
+      <ul class="bullets"></ul>
+    </div>
+  </div>
+
+  <script defer src="/assets/script.js"></script>
 </body>
 </html>
