@@ -1,126 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kyle Colglazier – Learning Experience Designer</title>
-    <meta
-      name="description"
-      content="Portfolio of Kyle Colglazier, a learning experience designer specializing in sales enablement and instructional design."
-    />
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="assets/css/global.css" />
-    <link
-      rel="stylesheet"
-      href="assets/css/dark.css"
-      id="dark-mode-stylesheet"
-      disabled
-    />
-  </head>
-  <body>
-    <header>
-      <div class="container">
-        <nav>
-          <a href="index.html" class="logo" aria-label="Kyle Colglazier home">
-            Kyle&nbsp;Colglazier
-          </a>
-          <div class="nav-links">
-            <a href="work.html">Work</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-            <button class="theme-toggle" data-theme-toggle aria-label="Switch theme">
-              🌙
-            </button>
-          </div>
-        </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kyle Colglazier — Learning Experience Design Portfolio</title>
+  <link rel="stylesheet" href="assets/css/global.css" />
+  <link rel="stylesheet" href="assets/css/dark.css" media="(prefers-color-scheme: dark)" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
 
-        <!-- Static headshot displayed on all pages -->
-        <div class="site-headshot">
-          <img src="assets/images/headshot.jpg" alt="Kyle Colglazier headshot" />
-        </div>
-      </div>
-    </header>
-    <main>
-      <section class="hero">
-        <h1>Designing learning experiences that accelerate performance</h1>
-        <p>
-          I craft evidence‑based, human‑centered learning that empowers sales
-          teams, elevates onboarding and delivers measurable outcomes. Explore
-          selected projects and get in touch to collaborate.
-        </p>
-        <div class="button-group">
-          <a href="work.html" class="btn primary">View Work</a>
-          <a href="contact.html" class="btn secondary">Contact</a>
-          <!-- Link to download resume -->
-          <a href="resume.docx" class="btn tertiary" download>Download Resume</a>
-        </div>
-      </section>
-      <section class="container">
-        <h2 style="text-align: center; margin-bottom: 2rem;">Featured Projects</h2>
-        <div class="projects">
-          <!-- Project card 1 -->
-          <a href="work/onboarding/index.html" class="project-card">
-            <h3>Sales Onboarding Redesign</h3>
-            <p>
-              Cut ramp time and improved manager coaching with a blended
-              onboarding experience. Case study coming soon.
-            </p>
-            <span class="badge">Coming Soon</span>
-          </a>
-          <!-- Project card 2 -->
-          <a href="work/ai-sim/index.html" class="project-card">
-            <h3>AI Role‑Play Simulations</h3>
-            <p>
-              Scaled objection handling practice using AI‑powered role‑play and
-              feedback. Case study coming soon.
-            </p>
-            <span class="badge">Coming Soon</span>
-          </a>
-          <!-- Project card 3 -->
-          <a href="work/certification/index.html" class="project-card">
-            <h3>Certification &amp; Training Programs</h3>
-            <p>
-              Built certification pathways and interactive training modules.
-              Case study coming soon.
-            </p>
-            <span class="badge">Coming Soon</span>
-          </a>
-          <!-- Project card 4 -->
-          <a href="work/lms-migration/index.html" class="project-card">
-            <h3>LMS Migration &amp; Analytics</h3>
-            <p>
-              Managed migration to a new LMS, governance and xAPI analytics.
-              Case study coming soon.
-            </p>
-            <span class="badge">Coming Soon</span>
-          </a>
-        </div>
-      </section>
-      <section class="logo-strip" aria-label="Previous collaborators">
-        <!-- Updated logo file names to use the latest assets downloaded -->
-        <img src="assets/images/meta.svg" alt="Meta" />
-        <img src="assets/images/paypal-icon.svg" alt="PayPal" />
-        <img src="assets/images/sidley.png" alt="Sidley Austin LLP" />
-        <img src="assets/images/tamu-2021.svg" alt="Texas A&amp;M University" />
-        <img src="assets/images/syracuse-s.svg" alt="Syracuse University" />
-      </section>
-    </main>
-    <footer>
-      <div class="container">
-        <p>&copy; <span id="year"></span> Kyle&nbsp;Colglazier. All rights reserved.</p>
-        <a
-          href="accessibility.html"
-          class="accessibility-link"
-          >Accessibility statement</a
-        >
-      </div>
-    </footer>
-    <!-- Scripts -->
-    <script src="assets/js/theme.js"></script>
-    <script>
-      // Update footer year
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
-  </body>
+  <div class="sidebar">
+    <img src="assets/images/headshot.jpg" alt="Kyle Colglazier headshot">
+    <h2>Kyle Colglazier</h2>
+    <p>Learning Experience Designer & Sales Enablement Expert</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="work.html">Work</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="Kyle-Colglazier-Resume.pdf" target="_blank">Download Resume</a>
+    </nav>
+  </div>
+
+  <div class="content">
+    <h1>Welcome</h1>
+    <p>I create impactful learning experiences that help teams grow skills and achieve measurable business results.</p>
+
+    <h2>Organisations I’ve Worked With</h2>
+    <div class="logo-row">
+      <img src="assets/images/meta-logo.svg" alt="Meta logo with infinity symbol and the word Meta">
+      <img src="assets/images/paypal-logo.svg" alt="PayPal logo, overlapping blue P letters">
+      <img src="assets/images/sidley-logo.svg" alt="Sidley Austin LLP logo">
+      <img src="assets/images/tamu-logo.svg" alt="Texas A&M University logo">
+      <img src="assets/images/syracuse-logo.svg" alt="Syracuse University logo">
+    </div>
+
+    <h2>Recent Projects</h2>
+    <div class="project-card">
+      <h3>Onboarding Program</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae magna vel leo facilisis facilisis.</p>
+    </div>
+
+  </div>
+
+</body>
 </html>
