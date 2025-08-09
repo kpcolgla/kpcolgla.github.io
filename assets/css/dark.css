@@ -1,0 +1,11 @@
+/* Dark theme overrides. Loaded via the theme toggle. */
+
+:root {
+  --bg: #121212;
+  --bg-secondary: #1e1e1e;
+  --text-primary: #f1f1f1;
+  --text-secondary: #cfcfcf;
+  --accent: #4dabf7;
+  --accent-hover: #339af0;
+  --border: #333;
+}
