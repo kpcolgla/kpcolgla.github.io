@@ -22,7 +22,13 @@
   <main class="wrap">
     <section class="hero" id="home">
       <div class="avatar">
-        <img src="/assets/img/headshot.jpg" alt="Kyle Colglazier headshot" />
+                  <picture>
+            <source srcset="/assets/img/headshot-512.webp" type="image/webp">
+            <source srcset="/assets/img/headshot.jpg" type="image/jpeg">
+            <img src="/assets/img/headshot.jpg" alt="Kyle Colglazier headshot" decoding="async" fetchpriority="high" />
+          </picture>
+        
+        
       </div>
       <div>
         <h1>Hi, I’m Kyle — Instructional Designer & Learning Strategist</h1>
