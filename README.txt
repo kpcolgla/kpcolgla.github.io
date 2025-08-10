@@ -1,14 +1,17 @@
-Kyle Platform Quest (Original Mario-like Portfolio)
-====================================================
-- 100% original art (generated shapes), no Nintendo IP.
-- Side-scrolling platformer with collectibles, enemies, and a goal flag.
-- Works on desktop & mobile (on-screen pads).
+Portfolio Odyssey — Playable Portfolio
+====================================
+Controls: Arrows/WASD move • Space/Up jump • E interact • P pause • Gamepad OK • Mobile on-screen controls
 
-Deploy on GitHub Pages:
-1) Upload all files to your `kpcolgla.github.io` repo root.
-2) Visit https://kpcolgla.github.io
+Structure
+- Title -> Hub (portal select) -> Level scenes (L1/L2/L3). Currently L1 is playable; L2/L3 are mapped.
+- Settings: reduced motion, assist mode (double jump), music/SFX volumes (placeholders for now).
+- Auto-save: level completion stored in localStorage.
 
-Customize:
-- Edit `js/platform-quest.js`.
-- Replace generated textures with your own pixel art by preloading images.
-- Adjust map in `makeMap()` and object positions in `create()`.
+Customize Me
+- Add case-study links in LevelComplete panel (Level.js: levelComplete()).
+- Adjust platform layout in makeMap() for each id.
+- Add NPCs with dialogue + links in Level.js (tryInteract()).
+- Drop real sprites into /assets and load via this.load.image() in preload().
+
+Deploy
+- Upload to your GitHub Pages repo root.
