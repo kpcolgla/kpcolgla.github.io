@@ -1,1 +1,25 @@
-(function(){const k='theme-preference',g=()=>localStorage.getItem(k),s=v=>localStorage.setItem(k,v);function a(p){document.documentElement.classList.toggle('dark',p==='dark')}const d=g();if(d)a(d);document.addEventListener('click',e=>{const t=e.target.closest('[data-toggle-theme]');if(!t)return;const c=g()||'system';const n=c==='light'?'dark':c==='dark'?'system':'light';s(n);a(n);t.setAttribute('aria-label','Theme: '+n);t.textContent=n==='light'?'🌞':n==='dark'?'🌙':'🖥️'});document.addEventListener('click',e=>{const b=e.target.closest('[data-menu-btn]');if(!b)return;const l=document.querySelector('.nav-links');if(l)l.classList.toggle('open')});const st=document.querySelector('[data-last-updated]');if(st&&!st.textContent.trim()){const d=new Date();st.textContent=d.toLocaleDateString(undefined,{year:'numeric',month:'long',day:'numeric'})}})();
+
+(function(){
+  const KEY='theme-preference';
+  const get=()=>localStorage.getItem(KEY);
+  const set=v=>localStorage.setItem(KEY,v);
+  function apply(pref){ document.documentElement.classList.toggle('dark', pref==='dark'); }
+  const saved=get(); if(saved) apply(saved);
+  document.addEventListener('click', e=>{
+    const t=e.target.closest('[data-toggle-theme]'); if(!t) return;
+    const cur=get()||'system';
+    const next= cur==='light' ? 'dark' : cur==='dark' ? 'system' : 'light';
+    set(next); apply(next);
+    t.setAttribute('aria-label','Theme: '+next);
+    t.textContent = next==='light' ? '🌞' : next==='dark' ? '🌙' : '🖥️';
+  });
+  document.addEventListener('click', e=>{
+    const m=e.target.closest('[data-menu-btn]'); if(!m) return;
+    const links=document.querySelector('.nav-links'); if(links) links.classList.toggle('open');
+  });
+  const stamp=document.querySelector('[data-last-updated]');
+  if(stamp && !stamp.textContent.trim()){
+    const d=new Date();
+    stamp.textContent=d.toLocaleDateString(undefined,{year:'numeric',month:'long',day:'numeric'});
+  }
+})();
