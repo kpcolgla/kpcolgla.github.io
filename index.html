@@ -2,22 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-  <title>Kyle's Career Quest</title>
-  <meta name="description" content="A playable portfolio: learn Kyle's story by playing.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Kyle Platform Quest</title>
+  <meta name="description" content="A Mario-like portfolio game with original art and mechanics.">
   <meta name="theme-color" content="#6F8F3E">
   <style>
-    html, body { height:100%; margin:0; padding:0; background:#0b0f14; }
+    html, body { margin:0; padding:0; height:100%; background:#0b0f14; }
     #game { width:100%; height:100%; display:flex; align-items:center; justify-content:center; }
-    .credits { position: fixed; left: 8px; bottom: 8px; color: #A3C76E; font: 12px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Arial; opacity:.8;}
-    .credits a { color:#A3C76E; text-decoration:none; border-bottom:1px dashed #8FB957; }
+    .hint { position:fixed; bottom:8px; left:8px; color:#A3C76E; font:12px/1.2 system-ui,-apple-system,Segoe UI,Roboto,Arial; opacity:.85; }
   </style>
-  <!-- Phaser 3 via JSDelivr CDN -->
   <script src="https://cdn.jsdelivr.net/npm/phaser@3.70.0/dist/phaser.min.js"></script>
 </head>
 <body>
   <div id="game"></div>
-  <div class="credits">Press H for help • <a href="https://kpcolgla.github.io/" target="_blank" rel="noopener">kpcolgla.github.io</a></div>
-  <script src="js/game.js"></script>
+  <div class="hint">Arrows/WASD move • Space jump • E interact • Mobile: on-screen pads</div>
+  <script src="js/platform-quest.js"></script>
 </body>
 </html>

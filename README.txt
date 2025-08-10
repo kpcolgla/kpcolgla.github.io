@@ -1,17 +1,14 @@
-Kyle's Career Quest — Starter
-=================================
-A playable portfolio scaffold (Phaser 3).
+Kyle Platform Quest (Original Mario-like Portfolio)
+====================================================
+- 100% original art (generated shapes), no Nintendo IP.
+- Side-scrolling platformer with collectibles, enemies, and a goal flag.
+- Works on desktop & mobile (on-screen pads).
 
-How to run locally:
-1) Use a local server (VS Code Live Server or `python3 -m http.server`).
-2) Open http://localhost:8000 (or the port your tool shows).
-
-How to deploy on GitHub Pages:
-1) Upload all files in this folder to your `kpcolgla.github.io` repo root.
+Deploy on GitHub Pages:
+1) Upload all files to your `kpcolgla.github.io` repo root.
 2) Visit https://kpcolgla.github.io
-3) Controls: Arrows/WASD move, Space jump, E interact (mobile: on-screen pads).
 
 Customize:
-- Edit js/game.js to add levels, NPCs, links, and content.
-- Replace runtime textures with real pixel art by loading images in preload().
-- Update TitleScene menu items to your actual resume/contact links.
+- Edit `js/platform-quest.js`.
+- Replace generated textures with your own pixel art by preloading images.
+- Adjust map in `makeMap()` and object positions in `create()`.
