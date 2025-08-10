@@ -14,3 +14,6 @@ This is a GitHub Pages-ready portfolio starter.
 - Place images into `/assets` and reference them in your HTML.
 - Add more project pages in `/projects`.
 
+
+## Assets
+- `assets/headshot.webp` and `assets/headshot.jpg` are optimized versions of your headshot used on the About section.

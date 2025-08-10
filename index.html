@@ -9,13 +9,235 @@
   <meta property="og:title" content="Kyle — Instructional Designer & Sales Enablement Strategist" />
   <meta property="og:description" content="Learning experience case studies, demos, and outcomes that drive performance." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://dummyimage.com/1200x630/101010/ffffff&text=Kyle+Portfolio" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <!-- Styles and scripts omitted for brevity in this snippet but will match full template -->
+  <style>
+    :root {
+      --bg: #0b0c0d; --elev: #111315; --text: #e6e8ea; --muted:#b0b7bd;
+      --accent: #14b884; --card: #0f1112; --border: #1b1e21;
+      --shadow: 0 10px 30px rgba(0,0,0,.25);
+    }
+    [data-theme="light"]{
+      --bg:#fcfcfd; --elev:#fff; --text:#0d1117; --muted:#5b6570;
+      --accent:#0ea37e; --card:#fff; --border:#e7ebef; --shadow: 0 10px 24px rgba(16,24,40,.06);
+    }
+    *{box-sizing:border-box} html,body{height:100%}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+    .container{max-width:1120px;margin:0 auto;padding:24px}
+    header{position:sticky;top:0;background:rgba(0,0,0,0);backdrop-filter:saturate(180%) blur(10px);z-index:100;border-bottom:1px solid var(--border)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#6ee7c8);box-shadow:var(--shadow)}
+    .brand h1{font-size:16px;margin:0;font-weight:700}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:500}
+    nav a:hover{color:var(--text)}
+    .btn{appearance:none;border:1px solid var(--border);background:var(--elev);color:var(--text);padding:10px 14px;border-radius:12px;font-weight:600;cursor:pointer}
+    .btn-accent{background:var(--accent);border-color:transparent;color:#041713}
+    .hero{padding:64px 0 24px 0}
+    .hero h2{font-size:40px;line-height:1.1;margin:0 0 12px 0}
+    .hero p{color:var(--muted);max-width:800px;margin:0 0 24px 0}
+    .chip{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--border);background:var(--card);padding:6px 10px;border-radius:999px;font-size:12px;color:var(--muted)}
+    .cta{display:flex;gap:12px;flex-wrap:wrap}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:20px}
+    .card{grid-column:span 6;background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);transition:transform .2s ease}
+    .thumb{aspect-ratio:16/9;background:linear-gradient(135deg,#0f5645,var(--accent));display:flex;align-items:center;justify-content:center;color:#01261d;font-weight:800;font-size:20px}
+    .card-body{padding:16px}
+    .meta{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+    .meta .tag{font-size:12px;color:var(--muted);border:1px dashed var(--border);padding:4px 8px;border-radius:999px}
+    .card h3{margin:6px 0 8px 0;font-size:18px}
+    .card p{margin:0;color:var(--muted)}
+    section{padding:40px 0} section h2{font-size:22px;margin:0 0 12px 0}
+    .about{display:grid;grid-template-columns:1fr;gap:20px}
+    @media(min-width:900px){.about{grid-template-columns:2fr 1.2fr}} /* room for headshot */
+    .box{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px;box-shadow:var(--shadow)}
+    footer{border-top:1px solid var(--border);padding:24px 0;color:var(--muted)}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+    .inline-link{color:var(--text);text-decoration:underline;text-decoration-color:var(--accent);text-underline-offset:3px}
+    .headshot{border-radius:16px;width:100%;height:auto;display:block;border:1px solid var(--border)}
+  </style>
 </head>
 <body>
-  <!-- Full body content from the earlier complete template -->
+  <header>
+    <div class="container nav">
+      <div class="brand" aria-label="Site home">
+        <div class="logo" aria-hidden="true"></div>
+        <h1>Kyle — LXD/ID Portfolio</h1>
+      </div>
+      <nav aria-label="Primary">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <button id="themeBtn" class="btn" aria-label="Toggle light/dark theme">Toggle</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container" id="home">
+      <span class="chip" aria-label="Role & focus">Instructional Design • Sales Enablement • LXD</span>
+      <h2>Learning experiences that improve performance — not just completion rates.</h2>
+      <p>I design and build onboarding, simulations, and performance‑support that shorten time‑to‑ramp and raise the floor on seller readiness. Below are a few representative projects. Each case study includes business context, design decisions, and outcomes.</p>
+      <div class="cta">
+        <a class="btn btn-accent" href="#work">View my work</a>
+        <a class="btn" href="#contact">Contact</a>
+      </div>
+    </section>
+
+    <section id="work" class="container">
+      <h2>Featured work</h2>
+      <div class="grid">
+        <article class="card" aria-labelledby="cs1-title">
+          <div class="thumb" role="img" aria-label="Storytelling program case study image placeholder">CS‑01</div>
+          <div class="card-body">
+            <div class="meta">
+              <span class="tag">Onboarding</span><span class="tag">Scenario‑based</span><span class="tag">Enablement</span>
+            </div>
+            <h3 id="cs1-title">Storytelling for Sellers — From Proficiency to Mastery</h3>
+            <p>4‑week blended program (ILT + eLearning + AI role‑play) that improved deck‑to‑conversation skills and reduced prep time for QBRs.</p>
+            <div class="spacer"></div>
+            <a class="inline-link" href="#" onclick="openCase('case1')">Read the case study →</a>
+          </div>
+        </article>
+        <article class="card" aria-labelledby="cs2-title">
+          <div class="thumb" role="img" aria-label="Certification prep case study image placeholder">CS‑02</div>
+          <div class="card-body">
+            <div class="meta">
+              <span class="tag">Certification</span><span class="tag">Assessment Design</span><span class="tag">Microlearning</span>
+            </div>
+            <h3 id="cs2-title">Digital Ads Certification Prep — Evidence‑based Retention</h3>
+            <p>Microlearning + retrieval practice sequence aligned to blueprint domains; raised first‑try pass confidence and reduced study time.</p>
+            <div class="spacer"></div>
+            <a class="inline-link" href="#" onclick="openCase('case2')">Read the case study →</a>
+          </div>
+        </article>
+        <article class="card" aria-labelledby="cs3-title">
+          <div class="thumb" role="img" aria-label="Compliance eLearning case study image placeholder">CS‑03</div>
+          <div class="card-body">
+            <div class="meta">
+              <span class="tag">Compliance</span><span class="tag">eLearning</span><span class="tag">Cornerstone</span>
+            </div>
+            <h3 id="cs3-title">Legal Compliance Revamp — From Mandatory to Meaningful</h3>
+            <p>Rebuilt annual training with scenarios + better branching logic; improved completion quality and decreased support tickets.</p>
+            <div class="spacer"></div>
+            <a class="inline-link" href="#" onclick="openCase('case3')">Read the case study →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="container">
+      <h2>About</h2>
+      <div class="about">
+        <div class="box">
+          <p><strong>Hi, I’m Kyle.</strong> I build learning that helps sales orgs do their jobs better — faster. My sweet spots are seller onboarding, scenario design, and AI‑assisted simulations for objection handling, discovery, and value articulation.</p>
+          <p>I started in higher ed teaching public speaking, then shifted to corporate L&D. Since then, I’ve designed programs for teams at tech and fintech companies, top law firms, and global partner ecosystems. I care about clarity, business impact, and making practice safe, scalable, and sticky.</p>
+          <p><strong>Focus:</strong> onboarding & accreditation • simulations & scenarios • certification prep • LMS implementation (Cornerstone)</p>
+        </div>
+        <div class="box">
+          <picture>
+            <source srcset="assets/headshot.webp" type="image/webp" />
+            <img class="headshot" src="assets/headshot.jpg" alt="Kyle — headshot" loading="lazy" />
+          </picture>
+        </div>
+      </div>
+      <div class="about" style="margin-top:20px">
+        <div class="box">
+          <p><strong>Selected tools</strong></p>
+          <ul>
+            <li>Design/dev: Storyline, Rise, Evolve, Figma</li>
+            <li>Video: Camtasia, Descript</li>
+            <li>LMS: Cornerstone, MindTickle</li>
+            <li>Data: xAPI basics, dashboards</li>
+            <li>AI: prompt systems for branching, role‑play bots</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="container">
+      <h2>Contact</h2>
+      <p>Have a role or project you’d like to discuss? I’d love to hear about it.</p>
+      <form class="about box" action="https://formspree.io/f/your-id" method="POST">
+        <label><span class="sr-only">Your name</span>
+          <input name="name" required placeholder="Your name" style="width:100%;padding:12px;border-radius:12px;border:1px solid var(--border);background:var(--elev);color:var(--text)">
+        </label>
+        <label><span class="sr-only">Email</span>
+          <input type="email" name="email" required placeholder="Email" style="width:100%;padding:12px;border-radius:12px;border:1px solid var(--border);background:var(--elev);color:var(--text)">
+        </label>
+        <label><span class="sr-only">Message</span>
+          <textarea name="message" required placeholder="How can I help?" rows="5" style="width:100%;padding:12px;border-radius:12px;border:1px solid var(--border);background:var(--elev);color:var(--text)"></textarea>
+        </label>
+        <div>
+          <button class="btn btn-accent" type="submit">Send</button>
+          <a class="btn" href="mailto:youremail@example.com?subject=Portfolio%20Inquiry%20from%20your%20website">Email instead</a>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <small>© <span id="year"></span> Kyle — Built with accessibility, performance, and learner outcomes in mind.</small>
+    </div>
+  </footer>
+
+  <dialog id="caseModal" style="max-width:920px;width:96%;border:none;border-radius:16px;padding:0;background:var(--card);color:var(--text);box-shadow:var(--shadow)">
+    <div style="display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border-bottom:1px solid var(--border)">
+      <strong id="modalTitle">Case Study</strong>
+      <button class="btn" onclick="closeCase()">Close</button>
+    </div>
+    <div id="modalBody" style="padding:16px;max-height:70vh;overflow:auto"></div>
+  </dialog>
+
+  <script>
+    const saved = localStorage.getItem('theme');
+    if(saved){ document.documentElement.setAttribute('data-theme', saved); }
+    document.getElementById('themeBtn').addEventListener('click', ()=>{
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'light' ? '' : 'light';
+      if(next){ document.documentElement.setAttribute('data-theme', next); }
+      else { document.documentElement.removeAttribute('data-theme'); }
+      localStorage.setItem('theme', next);
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const CASES = {
+      case1:{ title:'Storytelling for Sellers — From Proficiency to Mastery', body:`
+          <p><strong>Snapshot:</strong> Audience: AE/AM sellers in EMEA; Scope: 4-week blended (ILT, self-paced, AI role-play); Role: lead designer; Tools: Evolve, Cornerstone, Figma; Timeline: 6 weeks.</p>
+          <p><strong>Challenge:</strong> Sellers struggled to shift from deck walkthroughs to narrative conversations. Success = tighter discovery questions and clearer value articulation in QBRs.</p>
+          <p><strong>Approach:</strong> Needs analysis interviews → learning objectives tied to enablement KPIs → scenario scripts → branching role-plays with targeted feedback → facilitator toolkit.</p>
+          <p><strong>Outcome:</strong> Directional lift in storytelling rubric scores during mock QBRs; reduced prep time reported by cohorts; adoption of the storyboard template by two regional teams.</p>
+          <p><strong>Artifacts:</strong> (Add GIFs, journey map, and a short interactive demo link.)</p>
+          <p><strong>Reflection:</strong> Next iteration adds xAPI events and spaced nudges via email.</p>
+      `},
+      case2:{ title:'Digital Ads Certification Prep — Evidence‑based Retention', body:`
+          <p><strong>Snapshot:</strong> Audience: partner marketers; Scope: microlearning series + practice bank; Role: ID; Tools: Rise, Figma; Timeline: 4 weeks.</p>
+          <p><strong>Challenge:</strong> Candidates over-studied low-value topics. Success = focus on blueprint-weighted domains and better first-try readiness.</p>
+          <p><strong>Approach:</strong> Retrieval practice, interleaving, confidence-based scoring; short mobile-friendly lessons; exam-like scenarios; weekly readiness check.</p>
+          <p><strong>Outcome:</strong> Increased perceived readiness and reduced time-on-study (qualitative); improved blueprint coverage in practice analytics.</p>
+          <p><strong>Artifacts:</strong> (Add blueprint map, sample item bank, and short Rise demo.)</p>
+          <p><strong>Reflection:</strong> Next: item analytics dashboard + adaptive study paths.</p>
+      `},
+      case3:{ title:'Legal Compliance Revamp — From Mandatory to Meaningful', body:`
+          <p><strong>Snapshot:</strong> Audience: legal staff; Scope: annual compliance; Role: sole ID; Tools: Storyline; Timeline: 5 weeks.</p>
+          <p><strong>Challenge:</strong> Low engagement and high support tickets due to unclear policies-in-practice.</p>
+          <p><strong>Approach:</strong> Scenario framing with realistic decision points; inline glossaries; printable job aids; WCAG AA contrast and transcripts.</p>
+          <p><strong>Outcome:</strong> Fewer LMS support tickets post-launch; positive SME feedback on scenario realism.</p>
+          <p><strong>Artifacts:</strong> (Add branching map, sample storyboard, and 60–90s guided demo.)</p>
+          <p><strong>Reflection:</strong> Next: add manager discussion guides and spaced follow-ups.</p>
+      `}
+    };
+    function openCase(key){
+      const d = document.getElementById('caseModal');
+      const data = CASES[key]; if(!data) return;
+      document.getElementById('modalTitle').textContent = data.title;
+      document.getElementById('modalBody').innerHTML = data.body;
+      if(typeof d.showModal === 'function') d.showModal(); else d.setAttribute('open','open');
+    }
+    function closeCase(){
+      const d = document.getElementById('caseModal');
+      if(typeof d.close === 'function') d.close(); else d.removeAttribute('open');
+    }
+  </script>
 </body>
 </html>
