@@ -13,4 +13,10 @@
     t.textContent = next==='light' ? '🌞' : next==='dark' ? '🌙' : '🖥️';
     t.setAttribute('aria-label','Theme: '+next);
   });
+  // last-updated (optional fallback if empty)
+  const stamp=document.querySelector('[data-last-updated]');
+  if(stamp && !stamp.textContent.trim()){
+    const d=new Date();
+    stamp.textContent=d.toLocaleDateString(undefined,{year:'numeric',month:'long',day:'numeric'});
+  }
 })();

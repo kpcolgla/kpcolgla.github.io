@@ -3,46 +3,67 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Contact — Kyle Colglazier</title>
-  <meta name="description" content="How to reach me." />
-  <meta name="theme-color" content="#2b7a6b" />
+  <title>Contact – Kyle Colglazier</title>
+  <meta name="description" content="Send a message or email." />
+  <meta name="theme-color" content="#6F8F3E" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <script defer data-domain="REPLACE-WITH-YOUR-DOMAIN" src="https://plausible.io/js/script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/global.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav">
+  <header class="site">
+    <div class="nav container">
       <div class="brand">
-        <img class="avatar" src="assets/images/headshot.jpg" alt="Portrait of Kyle Colglazier">
-        <div>
-          <div class="name">Kyle Colglazier</div>
-          <p class="role">Learning Experience Design &amp; Sales Enablement</p>
-        </div>
+        <img class="avatar" src="/assets/images/headshot.jpg" alt="Kyle Colglazier headshot">
+        <div><div class="name">Kyle Colglazier</div><p class="role">Learning Experience Design &amp; Sales Enablement</p></div>
       </div>
       <nav class="links" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="work.html">Work</a>
-        <a href="contact.html" aria-current="page">Contact</a>
-        <a href="assets/docs/Kyle Colglazier Resume_Master.docx" target="_blank" rel="noopener">Resume</a>
-        <button type="button" class="theme" data-theme aria-label="Toggle theme">🌞</button>
+        <a href="/index.html">Home</a>
+        <a href="/work.html">Work</a>
+        <a href="/contact.html" aria-current="page">Contact</a>
+        <a href="/assets/docs/Kyle Colglazier Resume_Master.docx" target="_blank" rel="noopener">Resume</a>
+        <button class="theme" type="button" data-theme aria-label="Theme: system">🖥️</button>
       </nav>
     </div>
   </header>
-  <main class="container">
+  <main id="main" class="container">
     
-<section class="section" style="padding-top:8px">
+<section class="section" style="padding-top:1rem">
   <h1>Contact</h1>
-  <p class="muted">I’m currently open to senior LXD / Enablement roles and consulting.</p>
-  <p><strong>Email:</strong> <a href="mailto:kpcolgla@gmail.com">kpcolgla@gmail.com</a></p>
-  <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/kyle-colglazier" target="_blank" rel="noopener">/in/kyle-colglazier</a></p>
+  <p class="muted">Prefer email? <a href="mailto:kpcolgla@gmail.com">kpcolglagmail.com</a> • Or send a message right here.</p>
+  <form class="form" action="https://formsubmit.co/kpcolgla@gmail.com" method="POST">
+    <!-- FormSubmit options -->
+    <input type="hidden" name="_subject" value="Portfolio contact — Kyle Colglazier">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_next" value="https://kpcolgla.github.io/contact.html?sent=1">
+    <p class="honey"><label>Leave this empty<input type="text" name="_honey"></label></p>
+
+    <p><label for="name">Your name</label><br><input id="name" class="input" type="text" name="name" required autocomplete="name" placeholder="Jane Doe"></p>
+    <p><label for="email">Your email</label><br><input id="email" class="input" type="email" name="email" required autocomplete="email" placeholder="jane@company.com"></p>
+    <p><label for="message">Message</label><br><textarea id="message" name="message" required placeholder="Tell me a bit about your team, goals, and timelines…"></textarea></p>
+    <p><button class="btn primary" type="submit">Send message</button></p>
+  </form>
 </section>
 
+<script>
+// Simple success notice
+(function(){
+  const params = new URLSearchParams(location.search);
+  if(params.get('sent')==='1'){
+    const s = document.createElement('div');
+    s.className='success';
+    s.textContent = 'Thanks — your message was sent! I'll respond shortly.';
+    document.querySelector('.form').insertAdjacentElement('beforebegin', s);
+    history.replaceState({}, '', location.pathname);
+  }
+})();
+</script>
+
     <footer>
-      <span>© 2025 Kyle Colglazier • <a href="accessibility.html">Accessibility</a></span>
+      <span>© 2025 Kyle Colglazier • <a href="/accessibility.html">Accessibility</a></span>
       <span>Last updated: <time data-last-updated>August 10, 2025</time></span>
     </footer>
   </main>
-  <script src="assets/js/site.js"></script>
-</body>
-</html>
+  <script src="/assets/js/theme.js"></script>
+</body></html>
