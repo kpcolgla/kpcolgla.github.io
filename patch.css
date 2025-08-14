@@ -1,0 +1,99 @@
+/* === Portfolio Micro-Patch: Alternating Timeline + Chip Hover + Equal About Cards === */
+/* Version: 2025-08-14 */
+
+/* ---- 1) Timeline: alternate left/right on desktop; stack on mobile ---- */
+.timeline {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8, 1.25rem) var(--space-12, 1.75rem);
+  align-items: start;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0; bottom: 0;
+  width: 2px;
+  background: var(--border-muted, rgba(255,255,255,.12));
+  transform: translateX(-50%);
+}
+.timeline-item {
+  position: relative;
+  max-width: 680px;
+}
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--accent, #79a36b);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--accent, #79a36b) 25%, transparent);
+}
+
+/* Odd items on the left, even items on the right */
+.timeline-item:nth-child(odd) { grid-column: 1; padding-right: var(--space-12, 1.75rem); }
+.timeline-item:nth-child(odd)::before { right: -6px; }
+.timeline-item:nth-child(even) { grid-column: 2; padding-left: var(--space-12, 1.75rem); }
+.timeline-item:nth-child(even)::before { left: -6px; }
+
+/* Mobile: stack to one column */
+@media (max-width: 900px) {
+  .timeline { grid-template-columns: 1fr; }
+  .timeline::before { left: 16px; transform: none; }
+  .timeline-item { grid-column: 1; padding-left: var(--space-8, 1.25rem); padding-right: 0; }
+  .timeline-item::before { left: -6px; right: auto; }
+}
+
+/* ---- 2) Skills chips: hover to sage accent, consistent focus states ---- */
+.chip, .pill, .tag {
+  display: inline-flex; align-items: center; gap: .5rem;
+  padding: .55rem .9rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-muted, rgba(255,255,255,.12));
+  background: var(--surface-1, rgba(255,255,255,.04));
+  color: var(--text-muted, rgba(255,255,255,.8));
+  transition: background-color .18s ease, color .18s ease, border-color .18s ease, transform .18s ease;
+}
+.chip:hover, .chip:focus-visible,
+.pill:hover, .pill:focus-visible,
+.tag:hover, .tag:focus-visible {
+  background: color-mix(in oklab, var(--accent, #79a36b) 18%, var(--surface-1, rgba(255,255,255,.04)));
+  border-color: var(--accent, #79a36b);
+  color: var(--text-strong, #fff);
+  transform: translateY(-1px);
+  outline: none;
+}
+.chip:active, .pill:active, .tag:active { transform: translateY(0); }
+
+/* Visible focus ring for keyboard users site-wide */
+:focus-visible { outline: 2px solid var(--accent, #79a36b); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .chip, .pill, .tag { transition: none; }
+}
+
+/* ---- 3) About section cards: equal height on desktop ---- */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-10, 1.5rem);
+  align-items: stretch;
+}
+.about-card, .facts-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid var(--border-muted, rgba(255,255,255,.12));
+  background: var(--surface-1, rgba(255,255,255,.04));
+  border-radius: var(--radius-xl, 16px);
+  padding: clamp(1rem, 2vw, 1.5rem);
+  height: 100%;
+}
+.facts-card ul { margin: 0; padding-left: 1rem; }
+.facts-card li { margin: .4rem 0; }
+
+@media (max-width: 900px) {
+  .about-grid { grid-template-columns: 1fr; }
+}
